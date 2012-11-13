@@ -44,6 +44,13 @@
     return [self init];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[self tableView] reloadData];
+}
+
 #pragma mark IBActions
 - (IBAction)addNewPossession:(id)sender
 {

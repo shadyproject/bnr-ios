@@ -40,6 +40,18 @@
     [[self navigationItem] setTitle:possession.possessionName];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    //clear first responder
+    [self.view endEditing:YES];
+    
+    [possession setPossessionName:[_nameField text]];
+    [possession setSerialNumber:[_serialField text]];
+    [possession setValueInDollars:[[_valueField text] intValue]];
+}
+
 - (void)dealloc {
     [possession release];
     [_nameField release];
@@ -49,6 +61,7 @@
     [super dealloc];
 }
 - (void)viewDidUnload {
+    possession = nil;
     [self setNameField:nil];
     [self setSerialField:nil];
     [self setValueField:nil];
