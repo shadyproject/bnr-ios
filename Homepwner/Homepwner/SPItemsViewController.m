@@ -17,6 +17,24 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     
+    if (self)
+    {
+        //create a button
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPossession:)];
+        
+        //set it as the nav bar item
+        [[self navigationItem] setRightBarButtonItem:bbi];
+        
+        //navigation item retains the button, so we can release it
+        [bbi release];
+        
+        //Set the title
+        [[self navigationItem] setTitle:@"Homepwner"];
+        
+        //magic!
+        [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
+    }
+    
     return self;
 }
 
@@ -26,33 +44,7 @@
     return [self init];
 }
 
-- (UIView *)headerView
-{
-    //if we haven't loaded the view yet...
-    if (!headerView) 
-    {
-        //load it
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
-    }
-    
-    return headerView;
-}
-
 #pragma mark IBActions
-- (IBAction)toggleEditingMode:(id)sender
-{
-    if ([self isEditing])
-    {
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        [self setEditing:NO animated:YES];
-    }
-    else
-    {
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        [self setEditing:YES animated:YES];
-    }
-}
-
 - (IBAction)addNewPossession:(id)sender
 {
     [[PossessionStore defaultStore] createPossession];
@@ -63,16 +55,6 @@
 
 
 #pragma mark TableVIewDataSource protocol methods
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    return [self headerView];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return [[self headerView] bounds].size.height;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[[PossessionStore defaultStore] allPossessions] count];
