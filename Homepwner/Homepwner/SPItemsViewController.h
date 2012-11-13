@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPItemDetailViewController.h"
 
 @interface SPItemsViewController : UITableViewController<UITableViewDataSource>
 {
-    IBOutlet UIView *headerView;
 }
 
 - (IBAction)addNewPossession:(id)sender;

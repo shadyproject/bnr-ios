@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D0DD5BB151854B800669D5D /* PossessionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DD5BA151854B800669D5D /* PossessionStore.m */; };
 		2D0DD5C5151AFE5200669D5D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0DD5C4151AFE5200669D5D /* HeaderView.xib */; };
+		2D78A39B1652053600228CE7 /* SPItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D78A3991652053600228CE7 /* SPItemDetailViewController.m */; };
+		2D78A39C1652053600228CE7 /* SPItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D78A39A1652053600228CE7 /* SPItemDetailViewController.xib */; };
 		2DC74F9E15184846003AC010 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC74F9D15184846003AC010 /* UIKit.framework */; };
 		2DC74FA015184846003AC010 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC74F9F15184846003AC010 /* Foundation.framework */; };
 		2DC74FA215184846003AC010 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC74FA115184846003AC010 /* CoreGraphics.framework */; };
@@ -24,6 +26,9 @@
 		2D0DD5B9151854B800669D5D /* PossessionStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PossessionStore.h; sourceTree = "<group>"; };
 		2D0DD5BA151854B800669D5D /* PossessionStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PossessionStore.m; sourceTree = "<group>"; };
 		2D0DD5C4151AFE5200669D5D /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		2D78A3981652053600228CE7 /* SPItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemDetailViewController.h; sourceTree = "<group>"; };
+		2D78A3991652053600228CE7 /* SPItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemDetailViewController.m; sourceTree = "<group>"; };
+		2D78A39A1652053600228CE7 /* SPItemDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPItemDetailViewController.xib; sourceTree = "<group>"; };
 		2DC74F9915184846003AC010 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC74F9D15184846003AC010 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2DC74F9F15184846003AC010 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +96,9 @@
 				2DC74FAD15184846003AC010 /* SPAppDelegate.m */,
 				2DC74FB715184BDF003AC010 /* SPItemsViewController.h */,
 				2DC74FB815184BDF003AC010 /* SPItemsViewController.m */,
+				2D78A3981652053600228CE7 /* SPItemDetailViewController.h */,
+				2D78A3991652053600228CE7 /* SPItemDetailViewController.m */,
+				2D78A39A1652053600228CE7 /* SPItemDetailViewController.xib */,
 				2DC74FB61518489C003AC010 /* NIBs */,
 				2DC74FA415184846003AC010 /* Supporting Files */,
 				2D0DD5B9151854B800669D5D /* PossessionStore.h */,
@@ -173,6 +181,7 @@
 				2DC74FA815184846003AC010 /* InfoPlist.strings in Resources */,
 				2DC74FB515184860003AC010 /* MainWindow.xib in Resources */,
 				2D0DD5C5151AFE5200669D5D /* HeaderView.xib in Resources */,
+				2D78A39C1652053600228CE7 /* SPItemDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +197,7 @@
 				2DC74FB915184BDF003AC010 /* SPItemsViewController.m in Sources */,
 				2DC74FBC15185308003AC010 /* Possession.m in Sources */,
 				2D0DD5BB151854B800669D5D /* PossessionStore.m in Sources */,
+				2D78A39B1652053600228CE7 /* SPItemDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

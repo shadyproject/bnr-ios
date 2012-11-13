@@ -100,4 +100,11 @@
     [[PossessionStore defaultStore] movePossessionAtIndex:sip.row toIndex:dip.row];
 }
 
+- (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SPItemDetailViewController *detailViewController = [[[SPItemDetailViewController alloc] init] autorelease];
+    
+    [[self navigationController] pushViewController:detailViewController animated:YES];
+}
+
 @end
