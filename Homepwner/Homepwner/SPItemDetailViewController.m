@@ -8,6 +8,7 @@
 
 #import "SPItemDetailViewController.h"
 #import "Possession.h"
+#import "ImageStore.h"
 
 @interface SPItemDetailViewController ()
 
@@ -37,6 +38,19 @@
     
     [_dateLabel setText:[df stringFromDate:possession.dateCreated]];
     
+    NSString *imgKey = [possession imageKey];
+    
+    if (imgKey)
+    {
+        UIImage *img = [[ImageStore defaultImageStore] imageForKey:imgKey];
+        [_imageView setImage:img];
+    }
+    else
+    {
+        [_imageView setImage:nil];
+    }
+    
+    
     [[self navigationItem] setTitle:possession.possessionName];
 }
 
@@ -58,6 +72,7 @@
     [_serialField release];
     [_valueField release];
     [_dateLabel release];
+    [_imageView release];
     [super dealloc];
 }
 - (void)viewDidUnload {
@@ -66,6 +81,57 @@
     [self setSerialField:nil];
     [self setValueField:nil];
     [self setDateLabel:nil];
+    [self setImageView:nil];
     [super viewDidUnload];
+}
+
+- (IBAction)takePicture:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    
+    //if we have a camera, use it.  otherwise, pick a photo
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    else
+    {
+        [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+    
+    [picker setDelegate:self];
+    [self presentModalViewController:picker animated:YES];
+    
+    //the picker will be retained by SPItemViewController until it is dismissed
+    [picker release];
+}
+
+#pragma mark Image Picker delegates
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *oldKey = [possession imageKey];
+    
+    //remove the old image if there is one
+    if (oldKey) {
+        [[ImageStore defaultImageStore] deleteImageForKey:oldKey];
+    }
+    
+    //get the picked image from the dict
+    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    CFUUIDRef uniqueId = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef uniqueIdString = CFUUIDCreateString(kCFAllocatorDefault, uniqueId);
+    
+    [possession setImageKey:(NSString *)uniqueIdString];
+    
+    CFRelease(uniqueId);
+    CFRelease(uniqueIdString);
+    
+    [[ImageStore defaultImageStore] setImage:img forKey:possession.imageKey];
+    
+    [_imageView setImage:img];
+    
+    //dismiss the picker
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

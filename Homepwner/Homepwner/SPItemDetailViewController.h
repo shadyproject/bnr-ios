@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 @class Possession;
 
-@interface SPItemDetailViewController : UIViewController
+@interface SPItemDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (retain, nonatomic) IBOutlet UITextField *nameField;
 @property (retain, nonatomic) IBOutlet UITextField *serialField;
 @property (retain, nonatomic) IBOutlet UITextField *valueField;
 @property (retain, nonatomic) IBOutlet UILabel *dateLabel;
+@property (retain, nonatomic) IBOutlet UIImageView *imageView;
 @property (retain, nonatomic) Possession *possession;
+- (IBAction)takePicture:(id)sender;
 
 @end
