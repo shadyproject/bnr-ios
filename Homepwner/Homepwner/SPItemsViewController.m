@@ -104,6 +104,10 @@
 {
     SPItemDetailViewController *detailViewController = [[[SPItemDetailViewController alloc] init] autorelease];
     
+    NSArray *possessions = [[PossessionStore defaultStore] allPossessions];
+    
+    [detailViewController setPossession:[possessions objectAtIndex:indexPath.row]];
+    
     [[self navigationController] pushViewController:detailViewController animated:YES];
 }
 
