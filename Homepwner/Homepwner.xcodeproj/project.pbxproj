@@ -11,6 +11,7 @@
 		2D0DD5C5151AFE5200669D5D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0DD5C4151AFE5200669D5D /* HeaderView.xib */; };
 		2D78A39B1652053600228CE7 /* SPItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D78A3991652053600228CE7 /* SPItemDetailViewController.m */; };
 		2D78A39C1652053600228CE7 /* SPItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D78A39A1652053600228CE7 /* SPItemDetailViewController.xib */; };
+		2D78A3A01652286900228CE7 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D78A39F1652286900228CE7 /* ImageStore.m */; };
 		2DC74F9E15184846003AC010 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC74F9D15184846003AC010 /* UIKit.framework */; };
 		2DC74FA015184846003AC010 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC74F9F15184846003AC010 /* Foundation.framework */; };
 		2DC74FA215184846003AC010 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC74FA115184846003AC010 /* CoreGraphics.framework */; };
@@ -29,6 +30,8 @@
 		2D78A3981652053600228CE7 /* SPItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemDetailViewController.h; sourceTree = "<group>"; };
 		2D78A3991652053600228CE7 /* SPItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemDetailViewController.m; sourceTree = "<group>"; };
 		2D78A39A1652053600228CE7 /* SPItemDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPItemDetailViewController.xib; sourceTree = "<group>"; };
+		2D78A39E1652286900228CE7 /* ImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStore.h; sourceTree = "<group>"; };
+		2D78A39F1652286900228CE7 /* ImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStore.m; sourceTree = "<group>"; };
 		2DC74F9915184846003AC010 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC74F9D15184846003AC010 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2DC74F9F15184846003AC010 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +66,8 @@
 		2DC74F8E15184846003AC010 = {
 			isa = PBXGroup;
 			children = (
+				2D78A39E1652286900228CE7 /* ImageStore.h */,
+				2D78A39F1652286900228CE7 /* ImageStore.m */,
 				2DC74FA315184846003AC010 /* Homepwner */,
 				2DC74F9C15184846003AC010 /* Frameworks */,
 				2DC74F9A15184846003AC010 /* Products */,
@@ -198,6 +203,7 @@
 				2DC74FBC15185308003AC010 /* Possession.m in Sources */,
 				2D0DD5BB151854B800669D5D /* PossessionStore.m in Sources */,
 				2D78A39B1652053600228CE7 /* SPItemDetailViewController.m in Sources */,
+				2D78A3A01652286900228CE7 /* ImageStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
