@@ -66,6 +66,12 @@
     [possession setValueInDollars:[[_valueField text] intValue]];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)dealloc {
     [possession release];
     [_nameField release];
@@ -104,6 +110,18 @@
     
     //the picker will be retained by SPItemViewController until it is dismissed
     [picker release];
+}
+
+- (IBAction)backgroundTapped:(id)sender
+{
+    [[self view] endEditing:YES];
+}
+
+- (IBAction)deletePicture:(id)sender
+{
+    [_imageView setImage:nil];
+    [[ImageStore defaultImageStore] deleteImageForKey:possession.imageKey];
+    //todo enable/disable the button
 }
 
 #pragma mark Image Picker delegates

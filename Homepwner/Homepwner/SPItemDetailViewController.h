@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Possession;
 
-@interface SPItemDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface SPItemDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (retain, nonatomic) IBOutlet UITextField *nameField;
 @property (retain, nonatomic) IBOutlet UITextField *serialField;
 @property (retain, nonatomic) IBOutlet UITextField *valueField;
@@ -17,5 +17,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView *imageView;
 @property (retain, nonatomic) Possession *possession;
 - (IBAction)takePicture:(id)sender;
+- (IBAction)backgroundTapped:(id)sender;
+- (IBAction)deletePicture:(id)sender;
 
 @end
