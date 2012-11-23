@@ -158,7 +158,7 @@
 		2DC74F9015184846003AC010 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Software Developer";
 			};
 			buildConfigurationList = 2DC74F9315184846003AC010 /* Build configuration list for PBXProject "Homepwner" */;
