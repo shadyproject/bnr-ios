@@ -51,6 +51,19 @@
     [[self tableView] reloadData];
 }
 
+//todo this method is deprecated in iOS 6
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)io
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        return YES;
+    }
+    else
+    {
+        return (io == UIInterfaceOrientationPortrait);
+    }
+}
+
 #pragma mark IBActions
 - (IBAction)addNewPossession:(id)sender
 {
