@@ -16,6 +16,7 @@
 
 @implementation SPItemDetailViewController
 @synthesize possession;
+@synthesize popoverController;
 
 - (void)viewDidLoad
 {
@@ -130,7 +131,17 @@
     }
     
     [picker setDelegate:self];
-    [self presentModalViewController:picker animated:YES];
+    
+    //present the picker as either a modal or via a popup
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        popoverController = [[UIPopoverController alloc] initWithContentViewController:picker];
+        [popoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    else
+    {
+        [self presentModalViewController:picker animated:YES];
+    }
     
     //the picker will be retained by SPItemViewController until it is dismissed
     [picker release];
@@ -173,7 +184,27 @@
     
     [_imageView setImage:img];
     
+    //todo enable the delete button here
+    
     //dismiss the picker
-    [self dismissModalViewControllerAnimated:YES];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        [popoverController dismissPopoverAnimated:YES];
+        //we autorelease here bcause the delegate method isn't called when we call the method above
+        [popoverController autorelease];
+        popoverController = nil;
+    }
+    else
+    {
+        [self dismissModalViewControllerAnimated:YES];
+    }
+}
+
+#pragma mark UIPopoverController delegates
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    NSLog(@"User dimissed popover");
+    [popoverController autorelease];
+    popoverController = nil;
 }
 @end
