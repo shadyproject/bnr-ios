@@ -2,8 +2,8 @@
 //  main.m
 //  Quiz
 //
-//  Created by Chris Martin on 12/24/11.
-//  Copyright (c) 2011 Software Developer. All rights reserved.
+//  Created by Christopher Martin on 11/24/12.
+//  Copyright (c) 2012 Shadyproject. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

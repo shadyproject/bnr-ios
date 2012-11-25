@@ -2,28 +2,18 @@
 //  SPAppDelegate.h
 //  Quiz
 //
-//  Created by Chris Martin on 12/24/11.
-//  Copyright (c) 2011 Software Developer. All rights reserved.
+//  Created by Christopher Martin on 11/24/12.
+//  Copyright (c) 2012 Shadyproject. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+@class SPViewController;
+
 @interface SPAppDelegate : UIResponder <UIApplicationDelegate>
-{
-	int currentQuestionIdx;
 
-	//Model Objects
-	NSMutableArray *questions;
-	NSMutableArray *answers;
+@property (strong, nonatomic) UIWindow *window;
 
-	//View Objects
-	IBOutlet UILabel *questionField;
-	IBOutlet UILabel *answerField;
-}
+@property (strong, nonatomic) SPViewController *viewController;
 
-@property (strong, nonatomic) IBOutlet UIWindow *window;
-
-#pragma mark Actions
-- (IBAction)showQuestion:(id)sender;
-- (IBAction)showAnswer:(id)sender;
 @end
