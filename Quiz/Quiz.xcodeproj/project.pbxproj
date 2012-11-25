@@ -20,6 +20,9 @@
 		2D14B52B1661BC3800FB1D03 /* SPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D14B5291661BC3800FB1D03 /* SPViewController.xib */; };
 		2D14B53216627E2600FB1D03 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D14B53116627E2600FB1D03 /* Icon.png */; };
 		2D14B53416627E2A00FB1D03 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D14B53316627E2A00FB1D03 /* Icon@2x.png */; };
+		2D14B5361662804A00FB1D03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D14B5351662804A00FB1D03 /* Default.png */; };
+		2D14B5381662804E00FB1D03 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D14B5371662804E00FB1D03 /* Default@2x.png */; };
+		2D14B53A1662805100FB1D03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D14B5391662805100FB1D03 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		2D14B52A1661BC3800FB1D03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPViewController.xib; sourceTree = "<group>"; };
 		2D14B53116627E2600FB1D03 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2D14B53316627E2A00FB1D03 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		2D14B5351662804A00FB1D03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2D14B5371662804E00FB1D03 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2D14B5391662805100FB1D03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,7 @@
 		2D14B4FF1661BC3700FB1D03 = {
 			isa = PBXGroup;
 			children = (
-				2D14B53316627E2A00FB1D03 /* Icon@2x.png */,
-				2D14B53116627E2600FB1D03 /* Icon.png */,
+				2D14B53B166280B200FB1D03 /* Icons */,
 				2D14B5141661BC3700FB1D03 /* Quiz */,
 				2D14B50D1661BC3700FB1D03 /* Frameworks */,
 				2D14B50B1661BC3700FB1D03 /* Products */,
@@ -111,6 +116,18 @@
 				2D14B5241661BC3800FB1D03 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D14B53B166280B200FB1D03 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2D14B5391662805100FB1D03 /* Default-568h@2x.png */,
+				2D14B5371662804E00FB1D03 /* Default@2x.png */,
+				2D14B5351662804A00FB1D03 /* Default.png */,
+				2D14B53316627E2A00FB1D03 /* Icon@2x.png */,
+				2D14B53116627E2600FB1D03 /* Icon.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +189,9 @@
 				2D14B52B1661BC3800FB1D03 /* SPViewController.xib in Resources */,
 				2D14B53216627E2600FB1D03 /* Icon.png in Resources */,
 				2D14B53416627E2A00FB1D03 /* Icon@2x.png in Resources */,
+				2D14B5361662804A00FB1D03 /* Default.png in Resources */,
+				2D14B5381662804E00FB1D03 /* Default@2x.png in Resources */,
+				2D14B53A1662805100FB1D03 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
