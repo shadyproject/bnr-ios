@@ -10,6 +10,7 @@
 		2D14B54C1662819800FB1D03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D14B54B1662819800FB1D03 /* Foundation.framework */; };
 		2D14B54F1662819800FB1D03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14B54E1662819800FB1D03 /* main.m */; };
 		2D14B5531662819800FB1D03 /* RandomPossessions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14B5521662819800FB1D03 /* RandomPossessions.1 */; };
+		2DD7A560166582070042D0B9 /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7A55F166582070042D0B9 /* SPItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		2D14B54E1662819800FB1D03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D14B5511662819800FB1D03 /* RandomPossessions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomPossessions-Prefix.pch"; sourceTree = "<group>"; };
 		2D14B5521662819800FB1D03 /* RandomPossessions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomPossessions.1; sourceTree = "<group>"; };
+		2DD7A55E166582070042D0B9 /* SPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItem.h; sourceTree = "<group>"; };
+		2DD7A55F166582070042D0B9 /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				2D14B54E1662819800FB1D03 /* main.m */,
+				2DD7A55E166582070042D0B9 /* SPItem.h */,
+				2DD7A55F166582070042D0B9 /* SPItem.m */,
 				2D14B5521662819800FB1D03 /* RandomPossessions.1 */,
 				2D14B5501662819800FB1D03 /* Supporting Files */,
 			);
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D14B54F1662819800FB1D03 /* main.m in Sources */,
+				2DD7A560166582070042D0B9 /* SPItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +242,7 @@
 				2D14B5581662819800FB1D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
