@@ -11,6 +11,11 @@
 @implementation SPItem
 
 #pragma mark Initializer Implementation
+- (id)init
+{
+    return [self initWithName:@"Default Name" serialNumber:@"0" dollarValue:0];
+}
+
 - (id)initWithName:(NSString *)name serialNumber:(NSString *)num dollarValue:(int)value
 {
     self = [super init];

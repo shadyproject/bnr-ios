@@ -29,12 +29,12 @@ int main(int argc, const char * argv[])
             NSLog(@"Item: %@", [items objectAtIndex:i]);
         }
         
-        SPItem *item = [[SPItem alloc] init];
-        [item setItemName:@"Orange Tweed Couch"]; //i totally own one of these
-        [item setSerialNumber:@"1"];
-        [item setValueInDollars:400];
-        
+        SPItem *item = [[SPItem alloc] initWithName:@"Orange Tweed Sofa" serialNumber:@"1" dollarValue:500];
         NSLog(@"Created SPItem: %@.", item);
+        
+        SPItem *otherItem = [[SPItem alloc] init];
+        NSLog(@"Default SPItem: %@", otherItem);
+        
         
         //destroy it
         items = nil;
