@@ -10,6 +10,24 @@
 
 @implementation SPItem
 
+#pragma mark Initializer Implementation
+- (id)initWithName:(NSString *)name serialNumber:(NSString *)num dollarValue:(int)value
+{
+    self = [super init];
+    
+    if (self)
+    {
+        itemName = name;
+        serialNumber = num;
+        valueInDollars = value;
+    
+        dateCreated = [NSDate date];
+    }
+    
+    return self;
+}
+
+#pragma mark Accessor Implementation
 - (NSString *)itemName
 {
     return itemName;

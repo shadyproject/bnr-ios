@@ -16,6 +16,12 @@
     NSDate *dateCreated;
 }
 
+#pragma mark Initializers
+- (id)initWithName:(NSString *)name
+      serialNumber:(NSString *)num
+       dollarValue:(int)value;
+
+#pragma mark Accessors
 - (NSString *)itemName;
 - (void)setItemName:(NSString *)name;
 
