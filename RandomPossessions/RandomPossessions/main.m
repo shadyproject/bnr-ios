@@ -22,6 +22,8 @@ int main(int argc, const char * argv[])
         SPItem *otherItem = [[SPItem alloc] init];
         NSLog(@"Default SPItem: %@", otherItem);
         
+        SPItem *randomItem = [SPItem randomItem];
+        NSLog(@"Random SPItem: %@", randomItem);
         
         //destroy it
         items = nil;
