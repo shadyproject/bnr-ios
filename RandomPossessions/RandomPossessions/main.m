@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPItem.h"
 
 int main(int argc, const char * argv[])
 {
@@ -28,6 +29,10 @@ int main(int argc, const char * argv[])
             NSLog(@"Item: %@", [items objectAtIndex:i]);
         }
         
+        SPItem *item = [[SPItem alloc] init];
+        
+        NSLog(@"Created SPItem: %@.  Name: %@, Serial: %@, Value: %i, Created: %@",
+              item, [item itemName], [item serialNumber], [item valueInDollars], [item dateCreated]);
         
         //destroy it
         items = nil;

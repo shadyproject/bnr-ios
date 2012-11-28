@@ -16,4 +16,15 @@
     NSDate *dateCreated;
 }
 
+- (NSString *)itemName;
+- (void)setItemName:(NSString *)name;
+
+- (NSString *)serialNumber;
+- (void)setSerialNumber:(NSString *)num;
+
+- (int)valueInDollars;
+- (void)setValueInDollars:(int)value;
+
+- (NSDate *)dateCreated;
+
 @end

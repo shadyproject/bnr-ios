@@ -10,4 +10,39 @@
 
 @implementation SPItem
 
+- (NSString *)itemName
+{
+    return itemName;
+}
+
+- (void)setItemName:(NSString *)name
+{
+    itemName = name;
+}
+
+- (NSString *)serialNumber
+{
+    return serialNumber;
+}
+
+- (void)setSerialNumber:(NSString *)num
+{
+    serialNumber = num;
+}
+
+- (int)valueInDollars
+{
+    return valueInDollars;
+}
+
+- (void)setValueInDollars:(int)value
+{
+    valueInDollars = value;
+}
+
+- (NSDate *)dateCreated
+{
+    return dateCreated;
+}
+
 @end
