@@ -16,16 +16,17 @@ int main(int argc, const char * argv[])
         //create an array
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        SPItem *item = [[SPItem alloc] initWithName:@"Orange Tweed Sofa" serialNumber:@"1" dollarValue:500];
-        NSLog(@"Created SPItem: %@.", item);
+        for (int i = 0; i < 10; i++)
+        {
+            SPItem *item = [SPItem randomItem];
+            [items addObject:item];
+        }
         
-        SPItem *otherItem = [[SPItem alloc] init];
-        NSLog(@"Default SPItem: %@", otherItem);
+        for (int i = 0; i < 10; i++) {
+            NSLog(@"%@", [items objectAtIndex:i]);
+        }
         
-        SPItem *randomItem = [SPItem randomItem];
-        NSLog(@"Random SPItem: %@", randomItem);
-        
-        //destroy it
+        //destroy the array when we're done
         items = nil;
     }
     return 0;
