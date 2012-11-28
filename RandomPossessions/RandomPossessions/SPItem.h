@@ -16,6 +16,9 @@
     NSDate *dateCreated;
 }
 
+#pragma mark Class Methods
++ (id) randomItem;
+
 #pragma mark Initializers
 - (id)initWithName:(NSString *)name
       serialNumber:(NSString *)num
