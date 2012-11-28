@@ -34,8 +34,7 @@ int main(int argc, const char * argv[])
         [item setSerialNumber:@"1"];
         [item setValueInDollars:400];
         
-        NSLog(@"Created SPItem: %@.  Name: %@, Serial: %@, Value: %i, Created: %@",
-              item, [item itemName], [item serialNumber], [item valueInDollars], [item dateCreated]);
+        NSLog(@"Created SPItem: %@.", item);
         
         //destroy it
         items = nil;

@@ -45,4 +45,12 @@
     return dateCreated;
 }
 
+#pragma mark Overrides
+- (NSString *)description
+{
+    NSString *desc =[NSString stringWithFormat:@"SPItem Name:%@ Serial:%@ Value:%i Created:%@",
+                     itemName, serialNumber, valueInDollars, dateCreated];
+    return desc;
+}
+
 @end
