@@ -30,6 +30,9 @@ int main(int argc, const char * argv[])
         }
         
         SPItem *item = [[SPItem alloc] init];
+        [item setItemName:@"Orange Tweed Couch"]; //i totally own one of these
+        [item setSerialNumber:@"1"];
+        [item setValueInDollars:400];
         
         NSLog(@"Created SPItem: %@.  Name: %@, Serial: %@, Value: %i, Created: %@",
               item, [item itemName], [item serialNumber], [item valueInDollars], [item dateCreated]);
