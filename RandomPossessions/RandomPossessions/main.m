@@ -16,19 +16,6 @@ int main(int argc, const char * argv[])
         //create an array
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        //add some items
-        [items addObject:@"One"];
-        [items addObject:@"Two"];
-        [items addObject:@"Three"];
-        
-        //add an item at a specific index
-        [items insertObject:@"Zero" atIndex:0];
-        
-        //todo this should use fast enumeration
-        for (int i = 0; i < [items count]; i++) {
-            NSLog(@"Item: %@", [items objectAtIndex:i]);
-        }
-        
         SPItem *item = [[SPItem alloc] initWithName:@"Orange Tweed Sofa" serialNumber:@"1" dollarValue:500];
         NSLog(@"Created SPItem: %@.", item);
         
