@@ -62,6 +62,11 @@
     return self;
 }
 
+- (id)initWithName:(NSString *)name serialNumber:(NSString *)serial
+{
+    return [self initWithName:name serialNumber:serial dollarValue:0];
+}
+
 #pragma mark Accessor Implementation
 - (NSString *)itemName
 {

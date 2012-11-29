@@ -24,6 +24,8 @@
       serialNumber:(NSString *)num
        dollarValue:(int)value;
 
+- (id)initWithName:(NSString *)name serialNumber:(NSString *)serial;
+
 #pragma mark Accessors
 - (NSString *)itemName;
 - (void)setItemName:(NSString *)name;

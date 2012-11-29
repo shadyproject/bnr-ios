@@ -22,6 +22,9 @@ int main(int argc, const char * argv[])
             [items addObject:item];
         }
         
+        SPItem *otherItem = [[SPItem alloc] initWithName:@"The Name" serialNumber:@"0xcafebabe"];
+        [items addObject:otherItem];
+        
         for (SPItem *item in items)
         {
             NSLog(@"%@", item);
