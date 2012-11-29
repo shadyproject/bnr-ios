@@ -20,6 +20,7 @@ int main(int argc, const char * argv[])
         {
             SPItem *item = [SPItem randomItem];
             [items addObject:item];
+            [item doSomethingWeird];
         }
         
         for (int i = 0; i < 10; i++) {
