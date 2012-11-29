@@ -16,8 +16,6 @@
     NSDate *dateCreated;
 }
 
-- (void)doSomethingWeird;
-
 #pragma mark Class Methods
 + (id) randomItem;
 
