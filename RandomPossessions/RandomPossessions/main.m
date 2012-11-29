@@ -8,27 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "SPItem.h"
+#import "SPContainer.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        //create an array
-        NSMutableArray *items = [[NSMutableArray alloc] init];
+        SPContainer *box = [[SPContainer alloc] init];
+        SPContainer *antique = [[SPContainer alloc] initWithName:@"Really Old Box" serialNumber:@"000001" dollarValue:500];
         
-        for (int i = 0; i < 10; i++)
-        {
-            SPItem *item = [SPItem randomItem];
-            [items addObject:item];
-        }
-        
-        for (SPItem *item in items)
-        {
-            NSLog(@"%@", item);
-        }
-        
-        //destroy the array when we're done
-        items = nil;
+        NSLog(@"%@", box);
+        NSLog(@"%@", antique);
     }
     return 0;
 }

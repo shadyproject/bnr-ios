@@ -11,6 +11,7 @@
 		2D14B54F1662819800FB1D03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14B54E1662819800FB1D03 /* main.m */; };
 		2D14B5531662819800FB1D03 /* RandomPossessions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14B5521662819800FB1D03 /* RandomPossessions.1 */; };
 		2DD7A560166582070042D0B9 /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7A55F166582070042D0B9 /* SPItem.m */; };
+		2DD7A564166735150042D0B9 /* SPContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7A563166735150042D0B9 /* SPContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		2D14B5521662819800FB1D03 /* RandomPossessions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomPossessions.1; sourceTree = "<group>"; };
 		2DD7A55E166582070042D0B9 /* SPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItem.h; sourceTree = "<group>"; };
 		2DD7A55F166582070042D0B9 /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
+		2DD7A562166735150042D0B9 /* SPContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPContainer.h; sourceTree = "<group>"; };
+		2DD7A563166735150042D0B9 /* SPContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				2DD7A55F166582070042D0B9 /* SPItem.m */,
 				2D14B5521662819800FB1D03 /* RandomPossessions.1 */,
 				2D14B5501662819800FB1D03 /* Supporting Files */,
+				2DD7A562166735150042D0B9 /* SPContainer.h */,
+				2DD7A563166735150042D0B9 /* SPContainer.m */,
 			);
 			path = RandomPossessions;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			files = (
 				2D14B54F1662819800FB1D03 /* main.m in Sources */,
 				2DD7A560166582070042D0B9 /* SPItem.m in Sources */,
+				2DD7A564166735150042D0B9 /* SPContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
