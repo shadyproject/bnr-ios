@@ -22,8 +22,9 @@ int main(int argc, const char * argv[])
             [items addObject:item];
         }
         
-        for (int i = 0; i < 10; i++) {
-            NSLog(@"%@", [items objectAtIndex:i]);
+        for (SPItem *item in items)
+        {
+            NSLog(@"%@", item);
         }
         
         //destroy the array when we're done
