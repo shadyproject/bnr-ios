@@ -15,10 +15,18 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         SPContainer *box = [[SPContainer alloc] init];
+        [box addSubItem:[SPItem randomItem]];
+        [box addSubItem:[SPItem randomItem]];
+        
         SPContainer *antique = [[SPContainer alloc] initWithName:@"Really Old Box" serialNumber:@"000001" dollarValue:500];
+        [antique addSubItem:[SPItem randomItem]];
         
         NSLog(@"%@", box);
         NSLog(@"%@", antique);
+        
+        [box addSubItem:antique];
+        
+        NSLog(@"%@", box);
     }
     return 0;
 }
