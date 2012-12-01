@@ -48,6 +48,16 @@
 #pragma mark Overrides
 - (NSString *)description
 {
-    return @"Overridden Description";
+    NSMutableString *desc = [NSMutableString stringWithFormat:@"%@ has %ld items and is worth %d.\n",
+                             [self itemName], [subItems count], [self totalValue]];
+    
+    int counter = 1;
+    for (SPItem *i in subItems)
+    {
+        [desc appendFormat:@"%d. %@\n", counter, i];
+        counter +=1;
+    }
+    
+    return desc;
 }
 @end
