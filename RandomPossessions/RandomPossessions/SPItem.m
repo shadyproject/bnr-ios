@@ -98,6 +98,28 @@
     return dateCreated;
 }
 
+- (SPItem *)containedItem
+{
+    return containedItem;
+}
+
+- (void)setContainedItem:(SPItem *)item
+{
+    containedItem = item;
+    
+    [item setContainer:self];
+}
+
+- (SPItem *)container
+{
+    return container;
+}
+
+- (void)setContainer:(SPItem *)item
+{
+    container = item;
+}
+
 #pragma mark Overrides
 - (NSString *)description
 {

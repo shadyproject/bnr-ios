@@ -14,6 +14,9 @@
     NSString *serialNumber;
     int valueInDollars;
     NSDate *dateCreated;
+    
+    SPItem *containedItem;
+    SPItem *container;
 }
 
 #pragma mark Class Methods
@@ -35,5 +38,11 @@
 - (void)setValueInDollars:(int)value;
 
 - (NSDate *)dateCreated;
+
+- (void)setContainedItem:(SPItem *)item;
+- (SPItem *)containedItem;
+
+- (void)setContainer:(SPItem *)container;
+- (SPItem *)container;
 
 @end

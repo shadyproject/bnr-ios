@@ -16,19 +16,18 @@ int main(int argc, const char * argv[])
         //create an array
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        for (int i = 0; i < 10; i++)
-        {
-            SPItem *item = [SPItem randomItem];
-            [items addObject:item];
-        }
+        SPItem *backpack = [[SPItem alloc] init];
+        [backpack setItemName:@"Backpack"];
+        [items addObject:backpack];
         
-        for (SPItem *item in items)
-        {
-            NSLog(@"%@", item);
-        }
+        SPItem *calculator = [[SPItem alloc] init];
+        [calculator setItemName:@"Calculator"];
+        [items addObject:calculator];
         
-        //destroy the array when we're done
-        NSLog(@"Setting items to nil.");
+        [backpack setContainedItem:calculator];
+        
+       //destroy the array when we're done
+        NSLog(@"Setting items to nil.");    
         items = nil;
     }
     return 0;
