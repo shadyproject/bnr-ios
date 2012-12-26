@@ -16,7 +16,7 @@
     NSDate *dateCreated;
     
     SPItem *containedItem;
-   __unsafe_unretained SPItem *container;
+    __weak SPItem *container;
 }
 
 #pragma mark Class Methods
