@@ -18,6 +18,7 @@
 		2D862B1F168CAC80004334B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D862B1E168CAC80004334B7 /* Default-568h@2x.png */; };
 		2D862B22168CAC80004334B7 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D862B21168CAC80004334B7 /* SPViewController.m */; };
 		2D862B25168CAC80004334B7 /* SPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D862B23168CAC80004334B7 /* SPViewController.xib */; };
+		2D862B2C168CB08E004334B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D862B2B168CB08E004334B7 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		2D862B20168CAC80004334B7 /* SPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPViewController.h; sourceTree = "<group>"; };
 		2D862B21168CAC80004334B7 /* SPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPViewController.m; sourceTree = "<group>"; };
 		2D862B24168CAC80004334B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPViewController.xib; sourceTree = "<group>"; };
+		2D862B2B168CB08E004334B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D862B2C168CB08E004334B7 /* CoreLocation.framework in Frameworks */,
 				2D862B09168CAC80004334B7 /* UIKit.framework in Frameworks */,
 				2D862B0B168CAC80004334B7 /* Foundation.framework in Frameworks */,
 				2D862B0D168CAC80004334B7 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		2D862AF9168CAC7F004334B7 = {
 			isa = PBXGroup;
 			children = (
+				2D862B2B168CB08E004334B7 /* CoreLocation.framework */,
 				2D862B0E168CAC80004334B7 /* Whereami */,
 				2D862B07168CAC80004334B7 /* Frameworks */,
 				2D862B05168CAC80004334B7 /* Products */,
