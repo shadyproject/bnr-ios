@@ -9,15 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SPItem : NSObject
-{
-    NSString *itemName;
-    NSString *serialNumber;
-    int valueInDollars;
-    NSDate *dateCreated;
-    
-    SPItem *containedItem;
-    __weak SPItem *container;
-}
 
 #pragma mark Class Methods
 + (id) randomItem;
