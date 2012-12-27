@@ -27,22 +27,13 @@
       serialNumber:(NSString *)num
        dollarValue:(int)value;
 
-#pragma mark Accessors
-- (NSString *)itemName;
-- (void)setItemName:(NSString *)name;
+#pragma mark Properties
+@property (nonatomic, strong) SPItem *containedItem;
+@property (nonatomic, weak) SPItem *container;
 
-- (NSString *)serialNumber;
-- (void)setSerialNumber:(NSString *)num;
-
-- (int)valueInDollars;
-- (void)setValueInDollars:(int)value;
-
-- (NSDate *)dateCreated;
-
-- (void)setContainedItem:(SPItem *)item;
-- (SPItem *)containedItem;
-
-- (void)setContainer:(SPItem *)container;
-- (SPItem *)container;
+@property (nonatomic) NSString *itemName;
+@property (nonatomic) NSString *serialNumber;
+@property (nonatomic) int valueInDollars;
+@property (nonatomic, readonly) NSDate *dateCreated;
 
 @end

@@ -9,6 +9,9 @@
 #import "SPItem.h"
 
 @implementation SPItem
+#pragma mark Property Synthesizers
+@synthesize itemName;
+@synthesize containedItem, container, serialNumber, valueInDollars, dateCreated;
 
 #pragma mark Class Methods
 + (id)randomItem
@@ -60,64 +63,6 @@
     }
     
     return self;
-}
-
-#pragma mark Accessor Implementation
-- (NSString *)itemName
-{
-    return itemName;
-}
-
-- (void)setItemName:(NSString *)name
-{
-    itemName = name;
-}
-
-- (NSString *)serialNumber
-{
-    return serialNumber;
-}
-
-- (void)setSerialNumber:(NSString *)num
-{
-    serialNumber = num;
-}
-
-- (int)valueInDollars
-{
-    return valueInDollars;
-}
-
-- (void)setValueInDollars:(int)value
-{
-    valueInDollars = value;
-}
-
-- (NSDate *)dateCreated
-{
-    return dateCreated;
-}
-
-- (SPItem *)containedItem
-{
-    return containedItem;
-}
-
-- (void)setContainedItem:(SPItem *)item
-{
-    containedItem = item;
-    
-    [item setContainer:self];
-}
-
-- (SPItem *)container
-{
-    return container;
-}
-
-- (void)setContainer:(SPItem *)item
-{
-    container = item;
 }
 
 #pragma mark Overrides
