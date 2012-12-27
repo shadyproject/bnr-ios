@@ -9,6 +9,7 @@
 #import "SPItem.h"
 
 @implementation SPItem
+
 #pragma mark Property Synthesizers
 @synthesize itemName;
 @synthesize containedItem, container, serialNumber, valueInDollars, dateCreated;
@@ -63,6 +64,13 @@
     }
     
     return self;
+}
+
+#pragma mark Method Implementations
+- (void)setContainedItem:(SPItem *)item
+{
+    containedItem = item;
+    [item setContainer:self];
 }
 
 #pragma mark Overrides
