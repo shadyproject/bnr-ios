@@ -2,28 +2,18 @@
 //  SPAppDelegate.h
 //  Whereami
 //
-//  Created by Chris Martin on 2/21/12.
-//  Copyright (c) 2012 Software Developer. All rights reserved.
+//  Created by Christopher Martin on 12/27/12.
+//  Copyright (c) 2012 Shadyproject. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
 
-@interface SPAppDelegate : UIResponder 
-	<UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
-{
-	CLGeocoder *geocoder;
-	CLLocationManager *locationManager;
-	IBOutlet MKMapView *worldView;
-	IBOutlet UIActivityIndicatorView *activityIndicator;
-	IBOutlet UITextField *locationTitleField;
-}
+@class SPViewController;
 
-@property (strong, nonatomic) IBOutlet UIWindow *window;
+@interface SPAppDelegate : UIResponder <UIApplicationDelegate>
 
-- (void)findLocation;
-- (void)foundLocation:(CLLocation *)loc;
-- (void)makeAnnotation:(CLPlacemark *)p;
+@property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) SPViewController *viewController;
 
 @end

@@ -2,8 +2,8 @@
 //  main.m
 //  Whereami
 //
-//  Created by Chris Martin on 2/21/12.
-//  Copyright (c) 2012 Software Developer. All rights reserved.
+//  Created by Christopher Martin on 12/27/12.
+//  Copyright (c) 2012 Shadyproject. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
