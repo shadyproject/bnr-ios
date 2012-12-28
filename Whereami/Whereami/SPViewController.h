@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface SPViewController : UIViewController
-
+@interface SPViewController : UIViewController<CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 @end

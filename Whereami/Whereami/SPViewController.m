@@ -14,6 +14,35 @@
 
 @implementation SPViewController
 
+#pragma mark CLLocationDelegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    
+}
+
+
+#pragma mark Overrides
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self)
+    {
+        //create location manager
+        locationManager = [[CLLocationManager alloc] init];
+        
+        [locationManager setDelegate:self];
+        
+        //make it accurate
+        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        
+        //start looking for the location
+        [locationManager startUpdatingLocation];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
