@@ -31,6 +31,11 @@
     NSLog(@"Could not get location: %@", error);
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+    NSLog(@"Changed heading: %@", newHeading);
+}
+
 
 #pragma mark Overrides
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,8 +49,8 @@
         
         [locationManager setDelegate:self];
         
-        //make it accurate
-        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        //get heading changes
+        [locationManager setHeadingFilter:22.5];
         
         //start looking for the location
         [locationManager startUpdatingLocation];
