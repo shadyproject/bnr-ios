@@ -15,9 +15,20 @@
 @implementation SPViewController
 
 #pragma mark CLLocationDelegate Methods
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+/*- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    
+    NSLog(@"Got New Locations: %@", locations);
+}*/
+
+//FIXME This method is deprecated
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location: %@", error);
 }
 
 
@@ -33,14 +44,19 @@
         
         [locationManager setDelegate:self];
         
-        //make it accurate
-        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        //we only want notifications every 50 meters
+        [locationManager setDistanceFilter:50.0];
         
         //start looking for the location
         [locationManager startUpdatingLocation];
     }
     
     return self;
+}
+
+- (void)dealloc
+{
+    [locationManager setDelegate:nil];
 }
 
 - (void)viewDidLoad
