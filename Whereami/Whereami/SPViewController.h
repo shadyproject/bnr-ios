@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface SPViewController : UIViewController<CLLocationManagerDelegate>
+@interface SPViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet MKMapView *worldView;

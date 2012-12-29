@@ -28,6 +28,19 @@
     NSLog(@"Could not get location: %@", error);
 }
 
+#pragma mark MKMapViewDelegate methods
+- (void)mapView:(MKMapView *)mapView didChangeUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
+{
+    //require method but we don't actually care about it
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+   
+    [worldView setRegion:region animated:YES];
+}
 
 #pragma mark Overrides
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
