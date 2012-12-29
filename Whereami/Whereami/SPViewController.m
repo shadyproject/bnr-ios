@@ -9,21 +9,18 @@
 #import "SPViewController.h"
 
 @interface SPViewController ()
-
 @end
 
 @implementation SPViewController
 
+#pragma mark Synthesize properties
+@synthesize locationManager;
+@synthesize worldView, activityIndicator, locationTitleField;
+
 #pragma mark CLLocationDelegate Methods
-/*- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     NSLog(@"Got new Locations: %@", locations);
-}*/
-
-//FIXME this method is deprecated
--(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"%@", newLocation);
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -41,14 +38,8 @@
     {
         //create location manager
         locationManager = [[CLLocationManager alloc] init];
-        
         [locationManager setDelegate:self];
-        
-        //make it accurate
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        
-        //start looking for the location
-        [locationManager startUpdatingLocation];
     }
     
     return self;
@@ -57,7 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [worldView setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning
