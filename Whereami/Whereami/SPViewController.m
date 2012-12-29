@@ -15,9 +15,20 @@
 @implementation SPViewController
 
 #pragma mark CLLocationDelegate Methods
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+/*- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    
+    NSLog(@"Got new Locations: %@", locations);
+}*/
+
+//FIXME this method is deprecated
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not get location: %@", error);
 }
 
 
