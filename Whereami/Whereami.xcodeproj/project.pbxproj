@@ -20,6 +20,7 @@
 		2D862B25168CAC80004334B7 /* SPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D862B23168CAC80004334B7 /* SPViewController.xib */; };
 		2D862B2C168CB08E004334B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D862B2B168CB08E004334B7 /* CoreLocation.framework */; };
 		2D862B32168EC3FD004334B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D862B31168EC3FD004334B7 /* MapKit.framework */; };
+		2D862B36168F660F004334B7 /* SPMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D862B35168F660F004334B7 /* SPMapPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		2D862B24168CAC80004334B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPViewController.xib; sourceTree = "<group>"; };
 		2D862B2B168CB08E004334B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2D862B31168EC3FD004334B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2D862B34168F660F004334B7 /* SPMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMapPoint.h; sourceTree = "<group>"; };
+		2D862B35168F660F004334B7 /* SPMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMapPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				2D862B17168CAC80004334B7 /* SPAppDelegate.h */,
 				2D862B18168CAC80004334B7 /* SPAppDelegate.m */,
 				2D862B20168CAC80004334B7 /* SPViewController.h */,
+				2D862B34168F660F004334B7 /* SPMapPoint.h */,
+				2D862B35168F660F004334B7 /* SPMapPoint.m */,
 				2D862B21168CAC80004334B7 /* SPViewController.m */,
 				2D862B23168CAC80004334B7 /* SPViewController.xib */,
 				2D862B0F168CAC80004334B7 /* Supporting Files */,
@@ -185,6 +190,7 @@
 				2D862B15168CAC80004334B7 /* main.m in Sources */,
 				2D862B19168CAC80004334B7 /* SPAppDelegate.m in Sources */,
 				2D862B22168CAC80004334B7 /* SPViewController.m in Sources */,
+				2D862B36168F660F004334B7 /* SPMapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
