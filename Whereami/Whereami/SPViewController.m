@@ -7,6 +7,7 @@
 //
 
 #import "SPViewController.h"
+#import "SPMapPoint.h"
 
 @interface SPViewController ()
 @end
@@ -21,6 +22,18 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     NSLog(@"Got new Locations: %@", locations);
+    
+    CLLocation *loc = locations[0];
+    
+    NSTimeInterval t = [[loc timestamp] timeIntervalSinceNow];
+    
+    //ignore the location if it was made more than 3 minutes ago
+    //since CLLocationManager will return a cached location first
+    if (t < -180)
+        return;
+    
+    [self foundLocation:loc];
+    
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -40,6 +53,17 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
    
     [worldView setRegion:region animated:YES];
+}
+
+#pragma mark UITextFieldDelegate methods
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //todo implement me
+    [self findLocation];
+    
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 #pragma mark Overrides
@@ -68,6 +92,32 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark Our Methods
+- (void)findLocation
+{
+    [locationManager startUpdatingLocation];
+    
+    [activityIndicator startAnimating];
+    [locationTitleField setHidden:YES];
+}
+
+- (void)foundLocation:(CLLocation *)loc
+{
+    CLLocationCoordinate2D coord = [loc coordinate];
+    
+    SPMapPoint *mp = [[SPMapPoint alloc] initWithCoordinates:coord title:[locationTitleField text]];
+    
+    [worldView addAnnotation:mp];
+    
+    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+    [worldView setRegion:reg];
+    
+    [locationTitleField setText:@""];
+    [activityIndicator stopAnimating];
+    [locationTitleField setHidden:NO];
+    [locationManager stopUpdatingLocation];
 }
 
 @end

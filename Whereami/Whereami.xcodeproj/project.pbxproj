@@ -95,9 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				2D862B17168CAC80004334B7 /* SPAppDelegate.h */,
-				2D862B18168CAC80004334B7 /* SPAppDelegate.m */,
-				2D862B20168CAC80004334B7 /* SPViewController.h */,
 				2D862B34168F660F004334B7 /* SPMapPoint.h */,
+				2D862B20168CAC80004334B7 /* SPViewController.h */,
+				2D862B18168CAC80004334B7 /* SPAppDelegate.m */,
 				2D862B35168F660F004334B7 /* SPMapPoint.m */,
 				2D862B21168CAC80004334B7 /* SPViewController.m */,
 				2D862B23168CAC80004334B7 /* SPViewController.xib */,
