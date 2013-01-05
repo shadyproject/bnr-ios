@@ -62,6 +62,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1ED27B1698A05800A057FF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2D862B17168CAC80004334B7 /* SPAppDelegate.h */,
+				2D862B34168F660F004334B7 /* SPMapPoint.h */,
+				2D862B20168CAC80004334B7 /* SPViewController.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		2D1ED27D1698A06900A057FF /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				2D862B18168CAC80004334B7 /* SPAppDelegate.m */,
+				2D862B35168F660F004334B7 /* SPMapPoint.m */,
+				2D862B21168CAC80004334B7 /* SPViewController.m */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
+		2D1ED27E1698A07E00A057FF /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				2D862B23168CAC80004334B7 /* SPViewController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
 		2D862AF9168CAC7F004334B7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,13 +122,9 @@
 		2D862B0E168CAC80004334B7 /* Whereami */ = {
 			isa = PBXGroup;
 			children = (
-				2D862B17168CAC80004334B7 /* SPAppDelegate.h */,
-				2D862B34168F660F004334B7 /* SPMapPoint.h */,
-				2D862B20168CAC80004334B7 /* SPViewController.h */,
-				2D862B18168CAC80004334B7 /* SPAppDelegate.m */,
-				2D862B35168F660F004334B7 /* SPMapPoint.m */,
-				2D862B21168CAC80004334B7 /* SPViewController.m */,
-				2D862B23168CAC80004334B7 /* SPViewController.xib */,
+				2D1ED27B1698A05800A057FF /* Headers */,
+				2D1ED27D1698A06900A057FF /* Implementations */,
+				2D1ED27E1698A07E00A057FF /* Xibs */,
 				2D862B0F168CAC80004334B7 /* Supporting Files */,
 			);
 			path = Whereami;
