@@ -120,4 +120,28 @@
     [locationManager stopUpdatingLocation];
 }
 
+-(IBAction)changeMapType:(id)sender
+{
+    NSInteger idx = ((UISegmentedControl *)sender).selectedSegmentIndex;
+    
+    switch (idx) {
+        case kMapControlIndex:
+            [worldView setMapType:MKMapTypeStandard];
+            break;
+            
+        case kSatelliteControlIndex:
+            [worldView setMapType:MKMapTypeSatellite];
+            break;
+            
+        case kHybridControlIndex:
+            [worldView setMapType:MKMapTypeHybrid];
+            break;
+            
+        default:
+            NSLog(@"Got unknown index %d from segmented control, using MKMapTypeStandard", idx);
+            [worldView setMapType:MKMapTypeStandard];
+            break;
+    }
+}
+
 @end
