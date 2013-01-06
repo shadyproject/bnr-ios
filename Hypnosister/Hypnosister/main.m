@@ -2,8 +2,8 @@
 //  main.m
 //  Hypnosister
 //
-//  Created by Chris Martin on 3/7/12.
-//  Copyright (c) 2012 Software Developer. All rights reserved.
+//  Created by Christopher Martin on 1/5/13.
+//  Copyright (c) 2013 Shadyproject. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
