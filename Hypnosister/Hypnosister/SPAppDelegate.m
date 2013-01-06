@@ -18,12 +18,10 @@
     
     CGRect viewFrame = CGRectMake(160, 240, 100, 150);
     SPHypnosisView *hypnosisView = [[SPHypnosisView alloc]initWithFrame:viewFrame];
-    [hypnosisView setBackgroundColor:[UIColor redColor]];
     [self.window addSubview:hypnosisView];
     
     CGRect anotherFrame = CGRectMake(50, 42, 98, 140);
     SPHypnosisView *viewTwo = [[SPHypnosisView alloc] initWithFrame:anotherFrame];
-    [viewTwo setBackgroundColor:[UIColor greenColor]];
     
     [hypnosisView addSubview:viewTwo];
     
