@@ -7,6 +7,7 @@
 //
 
 #import "SPAppDelegate.h"
+#import "SPHypnosisView.h"
 
 @implementation SPAppDelegate
 
@@ -14,6 +15,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    CGRect viewFrame = CGRectMake(160, 240, 100, 150);
+    SPHypnosisView *hypnosisView = [[SPHypnosisView alloc]initWithFrame:viewFrame];
+    [hypnosisView setBackgroundColor:[UIColor redColor]];
+    [self.window addSubview:hypnosisView];
+    
+    CGRect anotherFrame = CGRectMake(50, 42, 98, 140);
+    SPHypnosisView *viewTwo = [[SPHypnosisView alloc] initWithFrame:anotherFrame];
+    [hypnosisView setBackgroundColor:[UIColor greenColor]];
+    [self.window addSubview:viewTwo];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
