@@ -14,9 +14,12 @@
 
 - (id)initWithCoordinates:(CLLocationCoordinate2D)c title:(NSString *)t;
 
-//required for MKAnnotation
+#pragma mark MKAnnotation Members
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-//required for MKAnnotation
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, readonly, copy) NSString *title;
+@property (nonatomic, readonly, copy) NSString *subtitle;
+
+#pragma mark Object Members
+@property (nonatomic, retain) NSDate *dateCreated;
 
 @end
