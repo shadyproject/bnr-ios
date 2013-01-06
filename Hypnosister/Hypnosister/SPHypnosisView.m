@@ -34,8 +34,13 @@
     
     CGContextSetLineWidth(context, 10);
     CGContextSetRGBStrokeColor(context, 0.6, 0.6, 0.6, 1.0);
-    CGContextAddArc(context, center.x, center.y, maxRadius, 0.0, M_PI * 2.0, YES);
-    CGContextStrokePath(context);
+    
+    //draw concentric circles from the outside in
+    for (float currentRadius  = maxRadius; currentRadius > 0; currentRadius -= 20)
+    {
+        CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2.0, YES);
+        CGContextStrokePath(context);
+    }
 }
 
 @end
