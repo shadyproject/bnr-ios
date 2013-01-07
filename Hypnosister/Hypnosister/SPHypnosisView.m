@@ -33,7 +33,7 @@
     float maxRadius = hypot(bounds.size.width, bounds.size.height) / 4.0;
     
     CGContextSetLineWidth(context, 10);
-    CGContextSetRGBStrokeColor(context, 0.6, 0.6, 0.6, 1.0);
+    [[UIColor lightGrayColor] setStroke];
     
     //draw concentric circles from the outside in
     for (float currentRadius  = maxRadius; currentRadius > 0; currentRadius -= 20)
