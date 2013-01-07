@@ -41,6 +41,21 @@
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2.0, YES);
         CGContextStrokePath(context);
     }
+    
+    //draw some text
+    NSString *toDraw = @"All glory to the hypnotoad.";
+    UIFont *drawFont = [UIFont boldSystemFontOfSize:28];
+    
+    CGRect textRect;
+    textRect.size = [toDraw sizeWithFont:drawFont];
+    
+    //center the text
+    textRect.origin.x = center.x - textRect.size.width/2.0;
+    textRect.origin.y = center.y - textRect.size.height/2.0;
+    
+    [[UIColor blackColor] setFill];
+    
+    [toDraw drawInRect:textRect withFont:drawFont];
 }
 
 @end
