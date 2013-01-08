@@ -14,11 +14,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
-    SPHypnosisView *hypnoView = [[SPHypnosisView alloc] initWithFrame:self.window.bounds];
+    CGRect screenRect = [self.window bounds];
     
-    [self.window addSubview:hypnoView];
+    //make a scrollview the size of the window
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [self.window addSubview:scrollView];
+    
+    //create a bigger hypnosis view
+    CGRect bigRect = screenRect;
+    bigRect.size.height *= 2.0;
+    bigRect.size.width *= 2.0;
+    SPHypnosisView *hypnoView = [[SPHypnosisView alloc] initWithFrame:bigRect];
+    
+    [scrollView addSubview:hypnoView];
+    
+    //set the size for the scroll view content
+    [scrollView setContentSize:bigRect.size];
     
     BOOL succeeded = [hypnoView becomeFirstResponder];
     
