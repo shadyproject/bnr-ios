@@ -13,6 +13,14 @@
 #pragma mark Synthesizers
 @synthesize circleColor;
 
+#pragma mark Property Implementations
+-(void)setCircleColor:(UIColor *)color
+{
+    circleColor = color;
+    [self setNeedsDisplay];
+}
+
+#pragma mark UIView overrides
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -68,9 +76,21 @@
     [toDraw drawInRect:textRect withFont:drawFont];
 }
 
+#pragma mark UIResponder overrides
 - (BOOL)canBecomeFirstResponder
 {
     return YES;
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"Received motion began event %@", event);
+    
+    if (UIEventSubtypeMotionShake == motion)
+    {
+        self.circleColor = [UIColor redColor];
+    }
+    
 }
 
 @end
