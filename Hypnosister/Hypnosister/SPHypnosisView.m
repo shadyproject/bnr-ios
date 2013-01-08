@@ -55,6 +55,11 @@
     
     [[UIColor blackColor] setFill];
     
+    //add a drop shadow
+    CGSize offset = CGSizeMake(4, 3);
+    CGColorRef shadowColor = [[UIColor darkGrayColor] CGColor];
+    CGContextSetShadowWithColor(context, offset, 2.0, shadowColor);
+    
     [toDraw drawInRect:textRect withFont:drawFont];
 }
 
