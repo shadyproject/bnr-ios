@@ -115,8 +115,8 @@
 		2D1ED2B016994B7300A057FF /* Implementaions */ = {
 			isa = PBXGroup;
 			children = (
-				2D1ED2B316994D2A00A057FF /* SPHypnosisView.m */,
 				2D1ED2A216994B5E00A057FF /* SPAppDelegate.m */,
+				2D1ED2B316994D2A00A057FF /* SPHypnosisView.m */,
 			);
 			name = Implementaions;
 			sourceTree = "<group>";
@@ -305,6 +305,7 @@
 				2D1ED2AE16994B5E00A057FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
