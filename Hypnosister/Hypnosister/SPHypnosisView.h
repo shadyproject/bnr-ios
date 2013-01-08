@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SPHypnosisView : UIView
-
+@property (nonatomic, strong) UIColor *circleColor;
 @end

@@ -10,12 +10,16 @@
 
 @implementation SPHypnosisView
 
+#pragma mark Synthesizers
+@synthesize circleColor;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
     {
         self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
     }
     return self;
 }
@@ -33,7 +37,7 @@
     float maxRadius = hypot(bounds.size.width, bounds.size.height) / 4.0;
     
     CGContextSetLineWidth(context, 10);
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     
     //draw concentric circles from the outside in
     for (float currentRadius  = maxRadius; currentRadius > 0; currentRadius -= 20)
@@ -53,13 +57,14 @@
     textRect.origin.x = center.x - textRect.size.width/2.0;
     textRect.origin.y = center.y - textRect.size.height/2.0;
     
-    [[UIColor blackColor] setFill];
     
     //add a drop shadow
     CGSize offset = CGSizeMake(4, 3);
     CGColorRef shadowColor = [[UIColor darkGrayColor] CGColor];
     CGContextSetShadowWithColor(context, offset, 2.0, shadowColor);
     
+    //draw the text in black
+    [[UIColor blackColor] setFill];
     [toDraw drawInRect:textRect withFont:drawFont];
 }
 
