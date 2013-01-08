@@ -68,4 +68,9 @@
     [toDraw drawInRect:textRect withFont:drawFont];
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
 @end

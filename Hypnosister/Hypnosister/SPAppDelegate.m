@@ -20,6 +20,17 @@
     
     [self.window addSubview:hypnoView];
     
+    BOOL succeeded = [hypnoView becomeFirstResponder];
+    
+    if (succeeded)
+    {
+        NSLog(@"Set HypnoView as first responder");
+    }
+    else
+    {
+        NSLog(@"Could not set HypnoView as first response");
+    }
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
