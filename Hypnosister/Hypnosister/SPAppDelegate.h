@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPHypnosisView.h"
 
-@interface SPAppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface SPAppDelegate : UIResponder <UIApplicationDelegate, UIScrollViewDelegate>
+{
+    SPHypnosisView *hypnoView;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

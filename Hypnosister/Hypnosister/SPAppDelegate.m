@@ -19,21 +19,15 @@
     
     //make a scrollview the size of the window
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-    [scrollView setPagingEnabled:YES];
+    [scrollView setMinimumZoomScale:1.0];
+    [scrollView setMaximumZoomScale:5.0];
+    [scrollView setDelegate:self];
     [self.window addSubview:scrollView];
     
-    //create a bigger hypnosis view
     CGRect bigRect = screenRect;
-    bigRect.size.width *= 2.0;
     
-    SPHypnosisView *hypnoView = [[SPHypnosisView alloc] initWithFrame:screenRect];
+    hypnoView = [[SPHypnosisView alloc] initWithFrame:screenRect];
     [scrollView addSubview:hypnoView];
-    
-    //move the second view off to the screen to the right
-    screenRect.origin.x = screenRect.size.width;
-    
-    SPHypnosisView *otherView = [[SPHypnosisView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:otherView];
     
     //set the size for the scroll view content
     [scrollView setContentSize:bigRect.size];
@@ -79,6 +73,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark UIScrollViewDelegate methods
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return hypnoView;
 }
 
 @end
