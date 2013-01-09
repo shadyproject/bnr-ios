@@ -15,6 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [[UIApplication sharedApplication]
+        setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    
     CGRect screenRect = [self.window bounds];
     
     //make a scrollview the size of the window
