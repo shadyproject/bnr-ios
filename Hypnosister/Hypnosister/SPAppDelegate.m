@@ -19,6 +19,7 @@
     
     //make a scrollview the size of the window
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [scrollView setPagingEnabled:YES];
     [self.window addSubview:scrollView];
     
     //create a bigger hypnosis view
