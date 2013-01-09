@@ -45,11 +45,16 @@
     float maxRadius = hypot(bounds.size.width, bounds.size.height) / 4.0;
     
     CGContextSetLineWidth(context, 10);
-    [self.circleColor setStroke];
+    
+    CGFloat hue;
     
     //draw concentric circles from the outside in
     for (float currentRadius  = maxRadius; currentRadius > 0; currentRadius -= 20)
     {
+        //draw each circle in a different color
+        hue = currentRadius/maxRadius;
+        [[UIColor colorWithHue:hue saturation:1.0 brightness:1.0 alpha:1.0] setStroke];
+        
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2.0, YES);
         CGContextStrokePath(context);
     }
@@ -84,6 +89,7 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
+    //TODO do something neat here like shuffle the colors
     NSLog(@"Received motion began event %@", event);
     
     if (UIEventSubtypeMotionShake == motion)
