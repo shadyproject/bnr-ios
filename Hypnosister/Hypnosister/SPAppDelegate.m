@@ -23,11 +23,16 @@
     
     //create a bigger hypnosis view
     CGRect bigRect = screenRect;
-    bigRect.size.height *= 2.0;
     bigRect.size.width *= 2.0;
-    SPHypnosisView *hypnoView = [[SPHypnosisView alloc] initWithFrame:bigRect];
     
+    SPHypnosisView *hypnoView = [[SPHypnosisView alloc] initWithFrame:screenRect];
     [scrollView addSubview:hypnoView];
+    
+    //move the second view off to the screen to the right
+    screenRect.origin.x = screenRect.size.width;
+    
+    SPHypnosisView *otherView = [[SPHypnosisView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:otherView];
     
     //set the size for the scroll view content
     [scrollView setContentSize:bigRect.size];
