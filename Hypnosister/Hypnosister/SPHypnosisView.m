@@ -11,14 +11,7 @@
 @implementation SPHypnosisView
 
 #pragma mark Synthesizers
-@synthesize circleColor;
-
-#pragma mark Property Implementations
--(void)setCircleColor:(UIColor *)color
-{
-    circleColor = color;
-    [self setNeedsDisplay];
-}
+@synthesize shouldDrawRandomColors;
 
 #pragma mark UIView overrides
 - (id)initWithFrame:(CGRect)frame
@@ -27,7 +20,7 @@
     if (self)
     {
         self.backgroundColor = [UIColor clearColor];
-        self.circleColor = [UIColor lightGrayColor];
+        self.shouldDrawRandomColors = false; //first time we dont want to do this
     }
     return self;
 }
@@ -51,9 +44,20 @@
     //draw concentric circles from the outside in
     for (float currentRadius  = maxRadius; currentRadius > 0; currentRadius -= 20)
     {
-        //draw each circle in a different color
-        hue = currentRadius/maxRadius;
-        [[UIColor colorWithHue:hue saturation:1.0 brightness:1.0 alpha:1.0] setStroke];
+        if (self.shouldDrawRandomColors)
+        {
+            float r = (float)random()/RAND_MAX;
+            float g = (float)random()/RAND_MAX;
+            float b = (float)random()/RAND_MAX;
+            
+            [[UIColor colorWithRed:r green:g blue:b alpha:1] setStroke];
+        }
+        else
+        {
+            //draw each circle in a different color based on position
+            hue = currentRadius/maxRadius;
+            [[UIColor colorWithHue:hue saturation:1.0 brightness:1.0 alpha:1.0] setStroke];
+        }
         
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2.0, YES);
         CGContextStrokePath(context);
@@ -94,7 +98,8 @@
     
     if (UIEventSubtypeMotionShake == motion)
     {
-        self.circleColor = [UIColor redColor];
+        self.shouldDrawRandomColors = true;
+        [self setNeedsDisplay];
     }
     
 }
