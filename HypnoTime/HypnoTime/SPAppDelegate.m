@@ -8,6 +8,7 @@
 
 #import "SPAppDelegate.h"
 #import "SPHypnosisViewController.h"
+#import "SPTimeViewController.h"
 
 @implementation SPAppDelegate
 
@@ -16,9 +17,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    SPHypnosisViewController *hvc = [[SPHypnosisViewController alloc] init];
+    //SPHypnosisViewController *hvc = [[SPHypnosisViewController alloc] init];
+    //[self.window setRootViewController:hvc];
     
-    [self.window setRootViewController:hvc];
+    SPTimeViewController *tvc = [[SPTimeViewController alloc] init];
+    [self.window setRootViewController:tvc];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
