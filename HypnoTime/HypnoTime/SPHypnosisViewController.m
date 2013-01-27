@@ -7,7 +7,15 @@
 //
 
 #import "SPHypnosisViewController.h"
+#import "SPHypnosisView.h"
 
 @implementation SPHypnosisViewController
 
+- (void)loadView
+{
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    SPHypnosisView *view = [[SPHypnosisView alloc] initWithFrame:frame];
+    
+    self.view = view;
+}
 @end
