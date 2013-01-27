@@ -11,9 +11,13 @@
 
 @implementation SPHypnosisViewController
 
+#pragma mark Overrides
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    NSBundle *appBundle = [NSBundle mainBundle];
+    
+    //explicity find a xib file, if we name the xib file after this controller, we don't need to do this
+    self = [super initWithNibName:@"SPTimeViewController" bundle:appBundle];
     
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
@@ -30,5 +34,12 @@
     SPHypnosisView *view = [[SPHypnosisView alloc] initWithFrame:frame];
     
     self.view = view;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    NSLog(@"SPHypnosisViewController loaded view");
 }
 @end
