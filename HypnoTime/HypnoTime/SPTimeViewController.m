@@ -10,6 +10,19 @@
 
 @implementation SPTimeViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        UITabBarItem *tbi = [self tabBarItem];
+        
+        tbi.title = @"Time";
+    }
+    
+    return self;
+}
+
 - (IBAction)showCurrentTime:(id)sender
 {
     NSDate *now = [NSDate date];

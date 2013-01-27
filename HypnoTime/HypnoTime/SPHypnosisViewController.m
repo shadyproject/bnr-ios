@@ -11,6 +11,19 @@
 
 @implementation SPHypnosisViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        UITabBarItem *tbi = [self tabBarItem];
+        
+        tbi.title = @"Hypnosis";
+    }
+    
+    return self;
+}
+
 - (void)loadView
 {
     CGRect frame = [[UIScreen mainScreen] bounds];
