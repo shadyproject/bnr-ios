@@ -18,6 +18,7 @@
 		2DD2044416B4F7CB0043A94C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2044316B4F7CB0043A94C /* Default-568h@2x.png */; };
 		2DD2044E16B503230043A94C /* SPHypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2044D16B503230043A94C /* SPHypnosisViewController.m */; };
 		2DD2045116B5033F0043A94C /* SPHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2045016B5033F0043A94C /* SPHypnosisView.m */; };
+		2DD2045416B5122F0043A94C /* SPTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2045316B5122F0043A94C /* SPTimeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		2DD2044D16B503230043A94C /* SPHypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHypnosisViewController.m; sourceTree = "<group>"; };
 		2DD2044F16B5033F0043A94C /* SPHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHypnosisView.h; sourceTree = "<group>"; };
 		2DD2045016B5033F0043A94C /* SPHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHypnosisView.m; sourceTree = "<group>"; };
+		2DD2045216B5122F0043A94C /* SPTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTimeViewController.h; sourceTree = "<group>"; };
+		2DD2045316B5122F0043A94C /* SPTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTimeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 		2DD2044A16B4F8590043A94C /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2DD2045216B5122F0043A94C /* SPTimeViewController.h */,
 				2DD2044F16B5033F0043A94C /* SPHypnosisView.h */,
 				2DD2044C16B503230043A94C /* SPHypnosisViewController.h */,
 				2DD2043C16B4F7CB0043A94C /* SPAppDelegate.h */,
@@ -118,6 +122,7 @@
 		2DD2044B16B4F85F0043A94C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2DD2045316B5122F0043A94C /* SPTimeViewController.m */,
 				2DD2045016B5033F0043A94C /* SPHypnosisView.m */,
 				2DD2044D16B503230043A94C /* SPHypnosisViewController.m */,
 				2DD2043D16B4F7CB0043A94C /* SPAppDelegate.m */,
@@ -195,6 +200,7 @@
 				2DD2043E16B4F7CB0043A94C /* SPAppDelegate.m in Sources */,
 				2DD2044E16B503230043A94C /* SPHypnosisViewController.m in Sources */,
 				2DD2045116B5033F0043A94C /* SPHypnosisView.m in Sources */,
+				2DD2045416B5122F0043A94C /* SPTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
