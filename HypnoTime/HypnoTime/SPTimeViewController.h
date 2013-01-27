@@ -9,4 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface SPTimeViewController : UIViewController
+
+@property IBOutlet UILabel *timeLabel;
+
+- (IBAction)showCurrentTime:(id)sender;
 @end

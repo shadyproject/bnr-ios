@@ -17,11 +17,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    //SPHypnosisViewController *hvc = [[SPHypnosisViewController alloc] init];
-    //[self.window setRootViewController:hvc];
-    
+    SPHypnosisViewController *hvc = [[SPHypnosisViewController alloc] init];
     SPTimeViewController *tvc = [[SPTimeViewController alloc] init];
-    [self.window setRootViewController:tvc];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    
+    NSArray *viewControllers = [NSArray arrayWithObjects:hvc, tvc, nil];
+    
+    [tabBar setViewControllers:viewControllers];
+    
+    [self.window setRootViewController:tabBar];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

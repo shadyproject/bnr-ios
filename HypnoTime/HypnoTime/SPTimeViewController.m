@@ -10,4 +10,12 @@
 
 @implementation SPTimeViewController
 
+- (IBAction)showCurrentTime:(id)sender
+{
+    NSDate *now = [NSDate date];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    [fmt setTimeStyle:NSDateFormatterMediumStyle];
+    
+    self.timeLabel.text = [fmt stringFromDate:now];
+}
 @end
