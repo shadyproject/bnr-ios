@@ -19,6 +19,7 @@
 		2DD2044E16B503230043A94C /* SPHypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2044D16B503230043A94C /* SPHypnosisViewController.m */; };
 		2DD2045116B5033F0043A94C /* SPHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2045016B5033F0043A94C /* SPHypnosisView.m */; };
 		2DD2045416B5122F0043A94C /* SPTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2045316B5122F0043A94C /* SPTimeViewController.m */; };
+		2DD2045616B514E10043A94C /* SPTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2045516B514E10043A94C /* SPTimeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2DD2045016B5033F0043A94C /* SPHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHypnosisView.m; sourceTree = "<group>"; };
 		2DD2045216B5122F0043A94C /* SPTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTimeViewController.h; sourceTree = "<group>"; };
 		2DD2045316B5122F0043A94C /* SPTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTimeViewController.m; sourceTree = "<group>"; };
+		2DD2045516B514E10043A94C /* SPTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTimeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				2DD2043F16B4F7CB0043A94C /* Default.png */,
 				2DD2044116B4F7CB0043A94C /* Default@2x.png */,
 				2DD2044316B4F7CB0043A94C /* Default-568h@2x.png */,
+				2DD2045516B514E10043A94C /* SPTimeViewController.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				2DD2044016B4F7CB0043A94C /* Default.png in Resources */,
 				2DD2044216B4F7CB0043A94C /* Default@2x.png in Resources */,
 				2DD2044416B4F7CB0043A94C /* Default-568h@2x.png in Resources */,
+				2DD2045616B514E10043A94C /* SPTimeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

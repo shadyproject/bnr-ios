@@ -8,6 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SPTimeViewController : NSObject
-
+@interface SPTimeViewController : UIViewController
 @end
