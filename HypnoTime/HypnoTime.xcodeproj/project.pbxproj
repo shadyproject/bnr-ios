@@ -89,8 +89,10 @@
 		2DD2043316B4F7CB0043A94C /* HypnoTime */ = {
 			isa = PBXGroup;
 			children = (
+				2DD2043916B4F7CB0043A94C /* main.m */,
 				2DD2044A16B4F8590043A94C /* Headers */,
 				2DD2044B16B4F85F0043A94C /* Implementations */,
+				2DD2048616B5E1BD0043A94C /* Xibs */,
 				2DD2043416B4F7CB0043A94C /* Supporting Files */,
 			);
 			path = HypnoTime;
@@ -101,12 +103,10 @@
 			children = (
 				2DD2043516B4F7CB0043A94C /* HypnoTime-Info.plist */,
 				2DD2043616B4F7CB0043A94C /* InfoPlist.strings */,
-				2DD2043916B4F7CB0043A94C /* main.m */,
 				2DD2043B16B4F7CB0043A94C /* HypnoTime-Prefix.pch */,
 				2DD2043F16B4F7CB0043A94C /* Default.png */,
 				2DD2044116B4F7CB0043A94C /* Default@2x.png */,
 				2DD2044316B4F7CB0043A94C /* Default-568h@2x.png */,
-				2DD2045516B514E10043A94C /* SPTimeViewController.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,6 +131,14 @@
 				2DD2043D16B4F7CB0043A94C /* SPAppDelegate.m */,
 			);
 			name = Implementations;
+			sourceTree = "<group>";
+		};
+		2DD2048616B5E1BD0043A94C /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2045516B514E10043A94C /* SPTimeViewController.xib */,
+			);
+			name = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
