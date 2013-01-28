@@ -10,7 +10,7 @@
 
 @interface SPTimeViewController : UIViewController
 
-@property IBOutlet UILabel *timeLabel;
+@property (weak) IBOutlet UILabel *timeLabel;
 
 - (IBAction)showCurrentTime:(id)sender;
 @end
