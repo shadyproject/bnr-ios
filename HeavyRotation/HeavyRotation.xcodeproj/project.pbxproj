@@ -16,6 +16,8 @@
 		2DD204B816B65E260043A94C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD204B716B65E260043A94C /* Default.png */; };
 		2DD204BA16B65E260043A94C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD204B916B65E260043A94C /* Default@2x.png */; };
 		2DD204BC16B65E260043A94C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD204BB16B65E260043A94C /* Default-568h@2x.png */; };
+		2DD204CC16B674CA0043A94C /* SPHeavyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD204CA16B674CA0043A94C /* SPHeavyViewController.m */; };
+		2DD204CD16B674CA0043A94C /* SPHeavyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD204CB16B674CA0043A94C /* SPHeavyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		2DD204B716B65E260043A94C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2DD204B916B65E260043A94C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2DD204BB16B65E260043A94C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2DD204C916B674CA0043A94C /* SPHeavyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPHeavyViewController.h; path = HeavyRotation/SPHeavyViewController.h; sourceTree = "<group>"; };
+		2DD204CA16B674CA0043A94C /* SPHeavyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPHeavyViewController.m; path = HeavyRotation/SPHeavyViewController.m; sourceTree = "<group>"; };
+		2DD204CB16B674CA0043A94C /* SPHeavyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SPHeavyViewController.xib; path = HeavyRotation/SPHeavyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 		2DD204C216B65E2E0043A94C /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2DD204C916B674CA0043A94C /* SPHeavyViewController.h */,
 				2DD204B416B65E260043A94C /* SPAppDelegate.h */,
 			);
 			name = Headers;
@@ -112,6 +118,7 @@
 		2DD204C316B65E350043A94C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2DD204CA16B674CA0043A94C /* SPHeavyViewController.m */,
 				2DD204B516B65E260043A94C /* SPAppDelegate.m */,
 			);
 			name = Implementations;
@@ -121,6 +128,7 @@
 		2DD204C416B65E3C0043A94C /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				2DD204CB16B674CA0043A94C /* SPHeavyViewController.xib */,
 			);
 			name = Xibs;
 			path = ..;
@@ -182,6 +190,7 @@
 				2DD204B816B65E260043A94C /* Default.png in Resources */,
 				2DD204BA16B65E260043A94C /* Default@2x.png in Resources */,
 				2DD204BC16B65E260043A94C /* Default-568h@2x.png in Resources */,
+				2DD204CD16B674CA0043A94C /* SPHeavyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +203,7 @@
 			files = (
 				2DD204B216B65E260043A94C /* main.m in Sources */,
 				2DD204B616B65E260043A94C /* SPAppDelegate.m in Sources */,
+				2DD204CC16B674CA0043A94C /* SPHeavyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
