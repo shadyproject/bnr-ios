@@ -32,6 +32,21 @@
     [self.view setBackgroundColor:[UIColor greenColor]];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"%@ will appear.", NSStringFromClass([self class]));
+    [super viewWillAppear:animated];
+    
+    [self showCurrentTime:nil];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    NSLog(@"%@ will disappear.", NSStringFromClass([self class]));
+    [super viewWillDisappear:animated];
+}
+
 #pragma IBActions
 
 - (IBAction)showCurrentTime:(id)sender
