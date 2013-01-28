@@ -32,12 +32,6 @@
     [self.view setBackgroundColor:[UIColor greenColor]];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    NSLog(@"This method is deprecated, and will never be called in iOS 6");
-}
-
 #pragma IBActions
 
 - (IBAction)showCurrentTime:(id)sender
