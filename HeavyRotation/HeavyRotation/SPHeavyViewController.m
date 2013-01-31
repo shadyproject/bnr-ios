@@ -8,31 +8,15 @@
 
 #import "SPHeavyViewController.h"
 
-@interface SPHeavyViewController ()
-
-@end
-
 @implementation SPHeavyViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+#pragma mark -
+#pragma mark Overrides
 
-- (void)viewDidLoad
+//note this is deprecated in iOS 6
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)x
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return (x == UIInterfaceOrientationPortrait) || UIInterfaceOrientationIsLandscape(x);
 }
 
 @end
