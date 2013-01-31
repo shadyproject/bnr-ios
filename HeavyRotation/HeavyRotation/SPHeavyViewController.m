@@ -13,10 +13,9 @@
 #pragma mark -
 #pragma mark Overrides
 
-//note this is deprecated in iOS 6
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)x
+- (NSUInteger)supportedInterfaceOrientations
 {
-    return (x == UIInterfaceOrientationPortrait) || UIInterfaceOrientationIsLandscape(x);
+    return UIInterfaceOrientationMaskAll;
 }
 
 @end
