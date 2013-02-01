@@ -7,6 +7,7 @@
 //
 
 #import "SPAppDelegate.h"
+#import "SPHeavyViewController.h"
 
 @implementation SPAppDelegate
 
@@ -22,6 +23,9 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(orientationChanged:)
                name:UIDeviceOrientationDidChangeNotification object:device];
+    
+    SPHeavyViewController *hvc = [[SPHeavyViewController alloc] init];
+    [self.window setRootViewController:hvc];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
