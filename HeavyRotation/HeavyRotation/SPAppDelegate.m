@@ -24,6 +24,10 @@
     [nc addObserver:self selector:@selector(orientationChanged:)
                name:UIDeviceOrientationDidChangeNotification object:device];
     
+    [nc addObserver:self selector:@selector(proximityChanged:)
+               name:UIDeviceProximityStateDidChangeNotification object:device];
+    [device setProximityMonitoringEnabled:YES];
+    
     SPHeavyViewController *hvc = [[SPHeavyViewController alloc] init];
     [self.window setRootViewController:hvc];
     
@@ -37,5 +41,10 @@
 - (void)orientationChanged:(NSNotification *)notification
 {
     NSLog(@"Orientation changed; %d", [[notification object] orientation]);
+}
+
+- (void)proximityChanged:(NSNotification *)notification
+{
+    NSLog(@"Proximity change: %@", ([notification.object proximityState] ? @"Close" : @"Far"));
 }
 @end
