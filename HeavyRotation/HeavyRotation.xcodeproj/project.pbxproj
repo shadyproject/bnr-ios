@@ -18,6 +18,7 @@
 		2DD204BC16B65E260043A94C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD204BB16B65E260043A94C /* Default-568h@2x.png */; };
 		2DD204CC16B674CA0043A94C /* SPHeavyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD204CA16B674CA0043A94C /* SPHeavyViewController.m */; };
 		2DD204CD16B674CA0043A94C /* SPHeavyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD204CB16B674CA0043A94C /* SPHeavyViewController.xib */; };
+		2DE2C82916BB403E007034B1 /* ponyWithBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE2C82816BB403E007034B1 /* ponyWithBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		2DD204C916B674CA0043A94C /* SPHeavyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPHeavyViewController.h; path = HeavyRotation/SPHeavyViewController.h; sourceTree = "<group>"; };
 		2DD204CA16B674CA0043A94C /* SPHeavyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPHeavyViewController.m; path = HeavyRotation/SPHeavyViewController.m; sourceTree = "<group>"; };
 		2DD204CB16B674CA0043A94C /* SPHeavyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SPHeavyViewController.xib; path = HeavyRotation/SPHeavyViewController.xib; sourceTree = "<group>"; };
+		2DE2C82816BB403E007034B1 /* ponyWithBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ponyWithBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		2DD204AC16B65E260043A94C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DE2C82816BB403E007034B1 /* ponyWithBackground.png */,
 				2DD204AD16B65E260043A94C /* HeavyRotation-Info.plist */,
 				2DD204AE16B65E260043A94C /* InfoPlist.strings */,
 				2DD204B316B65E260043A94C /* HeavyRotation-Prefix.pch */,
@@ -191,6 +194,7 @@
 				2DD204BA16B65E260043A94C /* Default@2x.png in Resources */,
 				2DD204BC16B65E260043A94C /* Default-568h@2x.png in Resources */,
 				2DD204CD16B674CA0043A94C /* SPHeavyViewController.xib in Resources */,
+				2DE2C82916BB403E007034B1 /* ponyWithBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +316,7 @@
 				2DD204C116B65E260043A94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
