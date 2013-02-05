@@ -16,6 +16,7 @@
 		2D7D6ECB16BBBB4400F8B98C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D6ECA16BBBB4400F8B98C /* Default.png */; };
 		2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D6ECC16BBBB4400F8B98C /* Default@2x.png */; };
 		2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D6ECE16BBBB4400F8B98C /* Default-568h@2x.png */; };
+		2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		2D7D6ECA16BBBB4400F8B98C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2D7D6ECC16BBBB4400F8B98C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2D7D6ECE16BBBB4400F8B98C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2D7D6ED816BE6B7D00F8B98C /* SPItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemsViewController.h; sourceTree = "<group>"; };
+		2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7D6EC716BBBB4400F8B98C /* SPAppDelegate.h */,
+				2D7D6ED816BE6B7D00F8B98C /* SPItemsViewController.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -111,6 +115,7 @@
 		2D7D6ED616BBBB6100F8B98C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */,
 				2D7D6EC816BBBB4400F8B98C /* SPAppDelegate.m */,
 			);
 			name = Implementations;
@@ -191,6 +196,7 @@
 			files = (
 				2D7D6EC516BBBB4400F8B98C /* main.m in Sources */,
 				2D7D6EC916BBBB4400F8B98C /* SPAppDelegate.m in Sources */,
+				2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
