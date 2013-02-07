@@ -20,4 +20,11 @@
     
     return sharedStore;
 }
+
+#pragma mark -
+#pragma mark Overrides
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [self sharedStore];
+}
 @end
