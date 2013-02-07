@@ -8,9 +8,15 @@
 
 #import "SPAppDelegate.h"
 #import "SPItemsViewController.h"
+#import "SPItemStore.h"
+#import "SPItem.h"
 
 @implementation SPAppDelegate
 
+
+
+#pragma mark -
+#pragma mark Application Delegate Notifications
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
