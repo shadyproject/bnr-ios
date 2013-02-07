@@ -76,7 +76,7 @@
 #pragma mark Overrides
 - (NSString *)description
 {
-    NSString *desc =[NSString stringWithFormat:@"SPItem Name:%@ Serial:%@ Value:%i Created:%@",
+    NSString *desc =[NSString stringWithFormat:@"%@ (%@) Worth %i Created:%@",
                      itemName, serialNumber, valueInDollars, dateCreated];
     return desc;
 }
