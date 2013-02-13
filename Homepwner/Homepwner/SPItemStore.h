@@ -20,4 +20,8 @@
 - (NSArray *)allItems;
 - (SPItem *)createItem;
 
+- (NSArray *)itemsWithValueLessThanOrEqualTo:(NSNumber *)value;
+- (NSArray *)itemsWithValueGreaterThan:(NSNumber *)value;
+- (NSArray *)itemsMatchingPredicate:(NSPredicate *)predicate;
+
 @end

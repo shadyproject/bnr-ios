@@ -36,6 +36,28 @@
     return item;
 }
 
+- (NSArray *)itemsMatchingPredicate:(NSPredicate *)predicate
+{
+    NSArray *matches = [[self allItems] filteredArrayUsingPredicate:predicate];
+    
+    return matches;
+}
+
+- (NSArray *)itemsWithValueGreaterThan:(NSNumber *)value
+{
+    NSPredicate *gtValue =  [NSPredicate predicateWithFormat:@"valueInDollars > %@", value];
+    
+    return [self itemsMatchingPredicate:gtValue];
+}
+
+- (NSArray *)itemsWithValueLessThanOrEqualTo:(NSNumber *)value
+{
+    NSPredicate *lteValue = [NSPredicate predicateWithFormat:@"valueInDollars <= %@", value];
+    
+    return [self itemsMatchingPredicate:lteValue];
+}
+
+
 #pragma mark -
 #pragma mark Overrides
 + (id)allocWithZone:(NSZone *)zone
