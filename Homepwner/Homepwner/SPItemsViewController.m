@@ -15,11 +15,13 @@
 #pragma mark UITableViewDataSourceMethods
 - (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section
 {
-    return [[SPItemStore sharedStore] allItems].count;
+    return [[SPItemStore sharedStore] allItems].count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"Creating cell for row %d", indexPath.row);
+    
     UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:@"UITableViewCell-Default"];
     
     if (!cell) {
@@ -28,9 +30,14 @@
                 initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell-Default"];
     }
     
-    SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
+    if (indexPath.row >= [[SPItemStore sharedStore] allItems].count) {
+        cell.textLabel.text = @"No more rows!";
+    } else {
+        
+        SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
+        cell.textLabel.text = [item description];
+    }
     
-    cell.textLabel.text = [item description];
     
     return cell;
 }
