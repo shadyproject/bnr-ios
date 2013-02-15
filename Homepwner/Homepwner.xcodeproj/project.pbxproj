@@ -19,6 +19,8 @@
 		2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */; };
 		2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDC16C3575700F8B98C /* SPItem.m */; };
 		2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */; };
+		2DB562A816CE048D00375F38 /* pony-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DB562A616CE048D00375F38 /* pony-nonretina.png */; };
+		2DB562A916CE048D00375F38 /* pony-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DB562A716CE048D00375F38 /* pony-retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		2D7D6EDC16C3575700F8B98C /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
 		2D7D6EDE16C3606C00F8B98C /* SPItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemStore.h; sourceTree = "<group>"; };
 		2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemStore.m; sourceTree = "<group>"; };
+		2DB562A616CE048D00375F38 /* pony-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pony-nonretina.png"; sourceTree = "<group>"; };
+		2DB562A716CE048D00375F38 /* pony-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pony-retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 		2D7D6EBF16BBBB4400F8B98C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DB562A616CE048D00375F38 /* pony-nonretina.png */,
+				2DB562A716CE048D00375F38 /* pony-retina.png */,
 				2D7D6EC016BBBB4400F8B98C /* Homepwner-Info.plist */,
 				2D7D6EC116BBBB4400F8B98C /* InfoPlist.strings */,
 				2D7D6EC416BBBB4400F8B98C /* main.m */,
@@ -194,6 +200,8 @@
 				2D7D6ECB16BBBB4400F8B98C /* Default.png in Resources */,
 				2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */,
 				2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */,
+				2DB562A816CE048D00375F38 /* pony-nonretina.png in Resources */,
+				2DB562A916CE048D00375F38 /* pony-retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +333,7 @@
 				2D7D6ED416BBBB4400F8B98C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
