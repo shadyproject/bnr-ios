@@ -12,8 +12,7 @@
 
 @implementation SPItemsViewController
 
-- (UIView *)headerView
-{
+- (UIView *)headerView {
     if (!headerView) {
         [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
     }
@@ -23,8 +22,7 @@
 
 #pragma mark -
 #pragma mark IBActions
-- (IBAction)toggleEditingMode:(id)sender
-{
+- (IBAction)toggleEditingMode:(id)sender {
     if ([self isEditing]) {
         [sender setTitle:@"Edit" forState:UIControlStateNormal];
         [self setEditing:NO];
@@ -34,8 +32,7 @@
     }
 }
 
-- (IBAction)addNewItem:(id)sender
-{
+- (IBAction)addNewItem:(id)sender {
     SPItem *item = [[SPItemStore sharedStore] createItem];
     
     int lastRow = [[[SPItemStore sharedStore] allItems] indexOfObject:item];
@@ -48,25 +45,21 @@
 
 #pragma mark -
 #pragma mark UITableViewDelegate Methods
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     return [self headerView];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return [self headerView].bounds.size.height;
 }
 
 #pragma mark -
 #pragma mark UITableViewDataSource Methods
-- (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section {
     return [[SPItemStore sharedStore] allItems].count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:@"UITableViewCell-Default"];
     
     if (!cell) {
@@ -82,17 +75,28 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        SPItemStore *store = [SPItemStore sharedStore];
+        NSArray *items = [store allItems];
+        SPItem *item = [items objectAtIndex:indexPath.row];
+        
+        [store removeItem:item];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 #pragma mark -
 #pragma mark Overrides
-- (id)init
-{
+- (id)init {
     self = [super initWithStyle:UITableViewStyleGrouped];
     
     return self;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
+- (id)initWithStyle:(UITableViewStyle)style {
     return [self init];
 }
 @end
