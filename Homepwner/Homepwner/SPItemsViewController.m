@@ -43,6 +43,7 @@
     } else {
         SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
         cell.textLabel.text = [item description];
+        cell.textLabel.font = [UIFont fontWithName:cell.textLabel.font.fontName size:20.0];
     }
     
     return cell;
