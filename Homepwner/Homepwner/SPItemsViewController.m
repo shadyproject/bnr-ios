@@ -88,12 +88,6 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     
-    if (self) {
-        for (int i = 0; i < 5; i += 1) {
-            [[SPItemStore sharedStore] createItem];
-        }
-    }
-    
     return self;
 }
 
