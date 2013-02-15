@@ -19,6 +19,7 @@
 		2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */; };
 		2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDC16C3575700F8B98C /* SPItem.m */; };
 		2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */; };
+		2DB562AB16CE13A200375F38 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB562AA16CE13A200375F38 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2D7D6EDC16C3575700F8B98C /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
 		2D7D6EDE16C3606C00F8B98C /* SPItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemStore.h; sourceTree = "<group>"; };
 		2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemStore.m; sourceTree = "<group>"; };
+		2DB562AA16CE13A200375F38 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		2D7D6ED716BBBB7000F8B98C /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				2DB562AA16CE13A200375F38 /* HeaderView.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				2D7D6ECB16BBBB4400F8B98C /* Default.png in Resources */,
 				2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */,
 				2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */,
+				2DB562AB16CE13A200375F38 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +329,7 @@
 				2D7D6ED416BBBB4400F8B98C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

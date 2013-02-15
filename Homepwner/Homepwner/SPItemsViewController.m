@@ -11,8 +11,55 @@
 #import "SPItemStore.h"
 
 @implementation SPItemsViewController
+
+- (UIView *)headerView
+{
+    if (!headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    
+    return headerView;
+}
+
 #pragma mark -
-#pragma mark UITableViewDataSourceMethods
+#pragma mark IBActions
+- (IBAction)toggleEditingMode:(id)sender
+{
+    if ([self isEditing]) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO];
+    } else {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
+}
+
+- (IBAction)addNewItem:(id)sender
+{
+    SPItem *item = [[SPItemStore sharedStore] createItem];
+    
+    int lastRow = [[[SPItemStore sharedStore] allItems] indexOfObject:item];
+    
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:ip]
+                            withRowAnimation:UITableViewRowAnimationTop];
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate Methods
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [self headerView];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return [self headerView].bounds.size.height;
+}
+
+#pragma mark -
+#pragma mark UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section
 {
     return [[SPItemStore sharedStore] allItems].count;
