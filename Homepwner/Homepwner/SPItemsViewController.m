@@ -59,6 +59,19 @@
         for (int i = 0; i < 5; i += 1) {
             [[SPItemStore sharedStore] createItem];
         }
+        
+        UIImage *bgImg;
+        
+        if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2.0) {
+            //Retina, use big image
+            bgImg = [UIImage imageNamed:@"pony-retina.png"];
+        } else {
+            bgImg = [UIImage imageNamed:@"pony-nonretina.png"];
+        }
+        
+        UIImageView *bgView = [[UIImageView alloc] initWithImage:bgImg];
+        
+        self.tableView.backgroundView = bgView;
     }
     
     return self;
