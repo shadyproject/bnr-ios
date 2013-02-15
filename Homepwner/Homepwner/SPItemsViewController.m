@@ -18,26 +18,32 @@
     return [[SPItemStore sharedStore] allItems].count + 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row >= [[SPItemStore sharedStore] allItems].count) {
+        return 44.0;
+    } else {
+        return 60.0;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Creating cell for row %d", indexPath.row);
     
-    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:@"UITableViewCell-Default"];
-    
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:@"UITableViewCell-Footer"];
     if (!cell) {
         cell =
-            [[UITableViewCell alloc]
-                initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell-Default"];
+            [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                   reuseIdentifier:@"UITableViewCell-Footer"];
     }
     
     if (indexPath.row >= [[SPItemStore sharedStore] allItems].count) {
         cell.textLabel.text = @"No more rows!";
     } else {
-        
         SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
         cell.textLabel.text = [item description];
     }
-    
     
     return cell;
 }
