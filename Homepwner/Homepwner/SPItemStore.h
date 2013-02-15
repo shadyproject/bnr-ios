@@ -19,5 +19,6 @@
 
 - (NSArray *)allItems;
 - (SPItem *)createItem;
+- (void)removeItem:(SPItem *)item;
 
 @end

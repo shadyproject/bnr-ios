@@ -11,8 +11,7 @@
 
 @implementation SPItemStore
 
-+ (SPItemStore *)sharedStore
-{
++ (SPItemStore *)sharedStore {
     static SPItemStore *sharedStore = nil;
     
     if (!sharedStore) {
@@ -22,13 +21,11 @@
     return sharedStore;
 }
 
-- (NSArray *)allItems
-{
+- (NSArray *)allItems {
     return allItems;
 }
 
-- (SPItem *)createItem
-{
+- (SPItem *)createItem {
     SPItem *item = [SPItem randomItem];
     
     [allItems addObject:item];
@@ -36,15 +33,17 @@
     return item;
 }
 
+- (void)removeItem:(SPItem *)item {
+    [allItems removeObjectIdenticalTo:item];
+}
+
 #pragma mark -
 #pragma mark Overrides
-+ (id)allocWithZone:(NSZone *)zone
-{
++ (id)allocWithZone:(NSZone *)zone {
     return [self sharedStore];
 }
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     
     if (self) {
