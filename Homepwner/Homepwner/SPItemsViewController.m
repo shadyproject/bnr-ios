@@ -53,6 +53,10 @@
     return [self headerView].bounds.size.height;
 }
 
+- (NSString *)tableView:(UITableView *)tv titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)ip {
+    return @"Remove";
+}
+
 #pragma mark -
 #pragma mark UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section {
