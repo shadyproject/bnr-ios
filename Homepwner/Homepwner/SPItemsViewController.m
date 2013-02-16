@@ -60,7 +60,7 @@
 #pragma mark -
 #pragma mark UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section {
-    return [[SPItemStore sharedStore] allItems].count;
+    return [[SPItemStore sharedStore] allItems].count + 1; //account for our fixed row
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,10 +72,14 @@
                 initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell-Default"];
     }
     
-    SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
+    if (indexPath.row >= [[SPItemStore sharedStore] allItems].count) {
+        cell.textLabel.text = @"No More Rows!";
+    } else {
+        SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
+        cell.textLabel.text = [item description];
+    }
     
-    cell.textLabel.text = [item description];
-    
+   
     return cell;
 }
 
