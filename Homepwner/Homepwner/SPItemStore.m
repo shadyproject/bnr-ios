@@ -37,6 +37,13 @@
     [allItems removeObjectIdenticalTo:item];
 }
 
+-(void)moveItemAtIndex:(int)from toIndex:(int)to {
+    SPItem *item = [allItems objectAtIndex:from];
+    
+    [allItems removeObjectAtIndex:from];
+    [allItems insertObject:item atIndex:to];
+}
+
 #pragma mark -
 #pragma mark Overrides
 + (id)allocWithZone:(NSZone *)zone {

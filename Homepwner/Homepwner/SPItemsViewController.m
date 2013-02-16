@@ -75,17 +75,21 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)style forRowAtIndexPath:(NSIndexPath *)ip {
+    if (style == UITableViewCellEditingStyleDelete) {
         SPItemStore *store = [SPItemStore sharedStore];
         NSArray *items = [store allItems];
-        SPItem *item = [items objectAtIndex:indexPath.row];
+        SPItem *item = [items objectAtIndex:ip.row];
         
         [store removeItem:item];
         
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+        [tv deleteRowsAtIndexPaths:[NSArray arrayWithObject:ip]
                          withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+- (void)tableView:(UITableView *)tv moveRowAtIndexPath:(NSIndexPath *)srcIp toIndexPath:(NSIndexPath *)dstIp {
+    [[SPItemStore sharedStore] moveItemAtIndex:srcIp.row toIndex:dstIp.row];
 }
 
 #pragma mark -
