@@ -100,6 +100,10 @@
     [[SPItemStore sharedStore] moveItemAtIndex:srcIp.row toIndex:dstIp.row];
 }
 
+- (BOOL)tableView:(UITableView *)tv canMoveRowAtIndexPath:(NSIndexPath *)ip {
+    return !(ip.row >= [[SPItemStore sharedStore]allItems].count);
+}
+
 #pragma mark -
 #pragma mark Overrides
 - (id)init {
