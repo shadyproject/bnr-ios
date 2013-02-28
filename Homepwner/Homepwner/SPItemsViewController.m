@@ -57,6 +57,19 @@
     return @"Remove";
 }
 
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
+    if (proposedDestinationIndexPath.row > [[SPItemStore sharedStore] allItems].count) {
+        NSLog(@"Trying to move row past static footer, canceling");
+        
+        NSIndexPath *newPath =
+            [NSIndexPath indexPathForRow:[[SPItemStore sharedStore] allItems].count
+                               inSection:proposedDestinationIndexPath.section];
+        return newPath;
+    }
+    
+    return proposedDestinationIndexPath;
+}
+
 #pragma mark -
 #pragma mark UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section {
@@ -97,11 +110,16 @@
 }
 
 - (void)tableView:(UITableView *)tv moveRowAtIndexPath:(NSIndexPath *)srcIp toIndexPath:(NSIndexPath *)dstIp {
+    NSLog(@"Moving item from row %ld to %ld", (long)srcIp.row, (long)dstIp.row);
+    
     [[SPItemStore sharedStore] moveItemAtIndex:srcIp.row toIndex:dstIp.row];
 }
 
 - (BOOL)tableView:(UITableView *)tv canMoveRowAtIndexPath:(NSIndexPath *)ip {
-    return !(ip.row >= [[SPItemStore sharedStore]allItems].count);
+    BOOL canMove = !(ip.row >= [[SPItemStore sharedStore]allItems].count);
+    NSLog(@"item will%@ be moved to new row", (canMove ? @"" : @" not"));
+    
+    return canMove;
 }
 
 #pragma mark -
