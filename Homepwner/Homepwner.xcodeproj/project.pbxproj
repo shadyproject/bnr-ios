@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */; };
+		2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */; };
 		2D7D6EB916BBBB4400F8B98C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EB816BBBB4400F8B98C /* UIKit.framework */; };
 		2D7D6EBB16BBBB4400F8B98C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EBA16BBBB4400F8B98C /* Foundation.framework */; };
 		2D7D6EBD16BBBB4400F8B98C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EBC16BBBB4400F8B98C /* CoreGraphics.framework */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D361E4D16E5ADB000723C42 /* SPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDetailViewController.h; sourceTree = "<group>"; };
+		2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDetailViewController.m; sourceTree = "<group>"; };
+		2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDetailViewController.xib; sourceTree = "<group>"; };
 		2D7D6EB516BBBB4400F8B98C /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D6EB816BBBB4400F8B98C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D7D6EBA16BBBB4400F8B98C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +119,7 @@
 		2D7D6ED516BBBB5700F8B98C /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2D361E4D16E5ADB000723C42 /* SPDetailViewController.h */,
 				2D7D6EDB16C3575700F8B98C /* SPItem.h */,
 				2D7D6EDE16C3606C00F8B98C /* SPItemStore.h */,
 				2D7D6EC716BBBB4400F8B98C /* SPAppDelegate.h */,
@@ -129,6 +135,7 @@
 				2D7D6EDC16C3575700F8B98C /* SPItem.m */,
 				2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */,
 				2D7D6EC816BBBB4400F8B98C /* SPAppDelegate.m */,
+				2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */,
 			);
 			name = Implementations;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 		2D7D6ED716BBBB7000F8B98C /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */,
 				2DB562AA16CE13A200375F38 /* HeaderView.xib */,
 			);
 			name = Xibs;
@@ -198,6 +206,7 @@
 				2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */,
 				2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */,
 				2DB562AB16CE13A200375F38 /* HeaderView.xib in Resources */,
+				2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +222,7 @@
 				2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */,
 				2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */,
 				2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */,
+				2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
