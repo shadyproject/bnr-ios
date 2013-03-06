@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SPDetailViewController : UIViewController
-
+{
+    __weak IBOutlet UITextField *nameField;
+    __weak IBOutlet UITextField *serialNumberField;
+    __weak IBOutlet UITextField *valueField;
+    __weak IBOutlet UILabel *dateLabel;
+}
 @end
