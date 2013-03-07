@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPDetailViewController.h"
 
 @interface SPItemsViewController : UITableViewController
 {

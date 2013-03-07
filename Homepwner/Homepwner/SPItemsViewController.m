@@ -53,6 +53,15 @@
     return [self headerView].bounds.size.height;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
+    
+    SPDetailViewController *dvc = [[SPDetailViewController alloc] init];
+    dvc.item = item;
+    
+    [self.navigationController pushViewController:dvc animated:YES];
+}
+
 #pragma mark -
 #pragma mark UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section {

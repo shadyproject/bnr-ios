@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class SPItem;
+
 @interface SPDetailViewController : UIViewController
 {
     __weak IBOutlet UITextField *nameField;
@@ -15,4 +17,6 @@
     __weak IBOutlet UITextField *valueField;
     __weak IBOutlet UILabel *dateLabel;
 }
+
+@property (nonatomic, strong) SPItem *item;
 @end
