@@ -30,4 +30,13 @@
     
     [dateLabel setText:[fmt stringFromDate:item.dateCreated]];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.view endEditing:YES];
+    item.itemName = nameField.text;
+    item.serialNumber = serialNumberField.text;
+    item.valueInDollars = valueField.text.integerValue;
+}
 @end

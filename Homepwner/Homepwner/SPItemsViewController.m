@@ -112,4 +112,10 @@
 - (id)initWithStyle:(UITableViewStyle)style {
     return [self init];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
 @end
