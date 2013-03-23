@@ -12,26 +12,8 @@
 
 @implementation SPItemsViewController
 
-- (UIView *)headerView {
-    if (!headerView) {
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
-    }
-    
-    return headerView;
-}
-
 #pragma mark -
 #pragma mark IBActions
-- (IBAction)toggleEditingMode:(id)sender {
-    if ([self isEditing]) {
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        [self setEditing:NO];
-    } else {
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        [self setEditing:YES animated:YES];
-    }
-}
-
 - (IBAction)addNewItem:(id)sender {
     SPItem *item = [[SPItemStore sharedStore] createItem];
     
@@ -45,14 +27,6 @@
 
 #pragma mark -
 #pragma mark UITableViewDelegate Methods
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [self headerView];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [self headerView].bounds.size.height;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
     
@@ -105,6 +79,19 @@
 #pragma mark Overrides
 - (id)init {
     self = [super initWithStyle:UITableViewStyleGrouped];
+    
+    if (self) {
+        [self.navigationItem setTitle:@"Homepwner"];
+        
+        //create a uibarbutton item
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc]
+                                initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                target:self action:@selector(addNewItem:)];
+        
+        [self.navigationItem setRightBarButtonItem:bbi];
+        
+        [self.navigationItem setLeftBarButtonItem:self.editButtonItem];
+    }
     
     return self;
 }
