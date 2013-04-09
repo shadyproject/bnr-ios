@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class SPItem;
+
 @interface SPChangeDateViewController : UIViewController
+{
+    __weak IBOutlet UIDatePicker *datePicker;
+}
+
+@property (nonatomic, strong) SPItem *item;
 
 @end

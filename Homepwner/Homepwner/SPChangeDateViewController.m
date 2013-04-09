@@ -7,32 +7,26 @@
 //
 
 #import "SPChangeDateViewController.h"
-
-@interface SPChangeDateViewController ()
-
-@end
+#import "SPItem.h"
 
 @implementation SPChangeDateViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize item;
 
-- (void)viewDidLoad
-{
+#pragma mark -
+#pragma mark Overrides
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    datePicker.date = item.dateCreated;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    item.dateCreated = datePicker.date;
 }
 
 @end
