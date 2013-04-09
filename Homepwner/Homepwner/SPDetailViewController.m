@@ -8,12 +8,26 @@
 
 #import "SPDetailViewController.h"
 #import "SPItem.h"
-
+#import "SPChangeDateViewController.h"
 
 @implementation SPDetailViewController
 
 @synthesize item;
 
+#pragma mark - 
+#pragma mark IBActions
+- (IBAction)changeDate:(id)sender {
+    NSLog(@"Loading Change Date Xib");
+    
+    SPChangeDateViewController *dcc = [[SPChangeDateViewController alloc] init];
+    dcc.item = self.item;
+    
+    [self.navigationController pushViewController:dcc animated:YES];
+}
+
+
+#pragma mark -
+#pragma mark Overrides
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];

@@ -19,4 +19,6 @@
 }
 
 @property (nonatomic, strong) SPItem *item;
+
+- (IBAction)changeDate:(id)sender;
 @end
