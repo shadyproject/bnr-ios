@@ -15,6 +15,7 @@
     __weak IBOutlet UITextField *nameField;
     __weak IBOutlet UITextField *serialNumberField;
     __weak IBOutlet UITextField *valueField;
+    __weak IBOutlet UIImageView *imageView;
     __weak IBOutlet UILabel *dateLabel;
 }
 
