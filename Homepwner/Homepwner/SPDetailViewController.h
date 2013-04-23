@@ -20,4 +20,8 @@
 }
 
 @property (nonatomic, strong) SPItem *item;
+
+- (IBAction)takePicture:(id)sender;
+
+
 @end

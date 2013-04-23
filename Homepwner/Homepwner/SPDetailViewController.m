@@ -14,6 +14,9 @@
 
 @synthesize item;
 
+#pragma mark -
+#pragma mark Overrides
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
@@ -38,5 +41,10 @@
     item.itemName = nameField.text;
     item.serialNumber = serialNumberField.text;
     item.valueInDollars = valueField.text.integerValue;
+}
+
+#pragma mark -
+#pragma mark IBActions
+- (IBAction)takePicture:(id)sender {
 }
 @end
