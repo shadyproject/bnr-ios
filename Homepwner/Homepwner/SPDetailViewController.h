@@ -10,7 +10,7 @@
 
 @class SPItem;
 
-@interface SPDetailViewController : UIViewController
+@interface SPDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     __weak IBOutlet UITextField *nameField;
     __weak IBOutlet UITextField *serialNumberField;
