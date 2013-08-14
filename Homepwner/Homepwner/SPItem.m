@@ -13,6 +13,7 @@
 #pragma mark Property Synthesizers
 @synthesize itemName;
 @synthesize containedItem, container, serialNumber, valueInDollars, dateCreated;
+@synthesize imageKey;
 
 #pragma mark Class Methods
 + (id)randomItem
