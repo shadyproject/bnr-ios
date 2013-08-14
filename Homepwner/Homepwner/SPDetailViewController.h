@@ -10,7 +10,7 @@
 
 @class SPItem;
 
-@interface SPDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface SPDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 {
     __weak IBOutlet UITextField *nameField;
     __weak IBOutlet UITextField *serialNumberField;
@@ -22,6 +22,6 @@
 @property (nonatomic, strong) SPItem *item;
 
 - (IBAction)takePicture:(id)sender;
-
+- (IBAction)backgroundTapped:(id)sender;
 
 @end

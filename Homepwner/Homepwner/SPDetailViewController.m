@@ -67,6 +67,17 @@
     [self presentViewController:imgPicker animated:YES completion:nil];
 }
 
+-(IBAction)backgroundTapped:(id)sender{
+    [[self view] endEditing:YES];
+}
+
+#pragma mark -
+#pragma mark UITextFieldDelegate Methods
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 #pragma mark -
 #pragma mark ImagePicker Delegates
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
