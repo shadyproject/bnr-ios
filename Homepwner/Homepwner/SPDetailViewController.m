@@ -64,6 +64,7 @@
     }
     
     [imgPicker setDelegate:self];
+    imgPicker.allowsEditing = YES;
     [self presentViewController:imgPicker animated:YES completion:nil];
 }
 
@@ -86,7 +87,7 @@
     if (oldKey) {
         [[SPImageStore sharedStore] deleteImageForKey:oldKey];
     }
-    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *img = [info objectForKey:UIImagePickerControllerEditedImage];
     
     CFUUIDRef newImageId = CFUUIDCreate(kCFAllocatorDefault);
     CFStringRef idString = CFUUIDCreateString(kCFAllocatorDefault, newImageId);
