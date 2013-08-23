@@ -19,7 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    
+    UIColor *color = nil;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        color = [UIColor colorWithRed:0.875f green:0.88f blue:0.91f alpha:1];
+    } else {
+        color = [UIColor groupTableViewBackgroundColor];
+    }
+    
+    [self.view setBackgroundColor:color];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
