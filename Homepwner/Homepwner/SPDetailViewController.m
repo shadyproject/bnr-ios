@@ -81,6 +81,12 @@
 #pragma mark -
 #pragma mark IBActions
 - (IBAction)takePicture:(id)sender {
+    if ([imgPickerPopover isPopoverVisible]) {
+        [imgPickerPopover dismissPopoverAnimated:YES];
+        imgPickerPopover = nil;
+        return;
+    }
+    
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -92,7 +98,15 @@
     }
     
     [imgPicker setDelegate:self];
-    [self presentViewController:imgPicker animated:YES completion:nil];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        imgPickerPopover = [[UIPopoverController alloc] initWithContentViewController:imgPicker];
+        [imgPickerPopover setDelegate:self];
+        
+        [imgPickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else {
+        [self presentViewController:imgPicker animated:YES completion:nil];
+    }
 }
 
 -(IBAction)backgroundTapped:(id)sender{
@@ -129,6 +143,18 @@
     CFRelease(idString);
     CFRelease(newImageId);
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [imgPickerPopover dismissPopoverAnimated:YES];
+        imgPickerPopover = nil;
+    }
+}
+
+#pragma mark -
+#pragma mark Popover Delegates
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
+    DLog(@"User dismissed popover");
+    imgPickerPopover = nil;
 }
 @end
