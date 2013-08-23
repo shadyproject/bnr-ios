@@ -30,7 +30,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
     
-    SPDetailViewController *dvc = [[SPDetailViewController alloc] init];
+    SPDetailViewController *dvc = [[SPDetailViewController alloc] initForNewItem:NO];
     dvc.item = item;
     
     [self.navigationController pushViewController:dvc animated:YES];
