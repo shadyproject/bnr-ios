@@ -17,12 +17,13 @@
 - (IBAction)addNewItem:(id)sender {
     SPItem *item = [[SPItemStore sharedStore] createItem];
     
-    int lastRow = [[[SPItemStore sharedStore] allItems] indexOfObject:item];
+    SPDetailViewController *dvc = [[SPDetailViewController alloc] initForNewItem:YES];
+    dvc.item = item;
     
-    NSIndexPath *ip = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dvc];
+    [navController setModalPresentationStyle:UIModalPresentationFormSheet];
     
-    [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:ip]
-                            withRowAnimation:UITableViewRowAnimationTop];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 #pragma mark -
