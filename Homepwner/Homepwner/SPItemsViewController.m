@@ -80,7 +80,11 @@
 //note that these only work in 6.0
 //the 5.0 and below way of doing this is to override shouldAutorotateToInterfaceOrientation
 -(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskAllButUpsideDown;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
