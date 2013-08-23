@@ -14,6 +14,7 @@
 @implementation SPDetailViewController
 
 @synthesize item;
+@synthesize dismissBlock;
 
 #pragma mark -
 #pragma mark Initializers
@@ -188,12 +189,12 @@
 #pragma mark -
 #pragma mark Instance Methods
 -(void)save:(id)sender{
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissBlock];
 }
 
 -(void)cancel:(id)sender{
     [[SPItemStore sharedStore] removeItem:self.item];
     
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissBlock];
 }
 @end

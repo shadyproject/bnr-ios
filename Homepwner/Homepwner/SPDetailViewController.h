@@ -22,6 +22,7 @@
 }
 
 @property (nonatomic, strong) SPItem *item;
+@property (nonatomic, copy) void (^dismissBlock)(void);
 
 -(id)initForNewItem:(BOOL)isNew;
 
