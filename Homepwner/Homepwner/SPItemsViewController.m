@@ -26,6 +26,7 @@
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dvc];
     [navController setModalPresentationStyle:UIModalPresentationFormSheet];
+    [navController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     
     [self presentViewController:navController animated:YES completion:nil];
 }
