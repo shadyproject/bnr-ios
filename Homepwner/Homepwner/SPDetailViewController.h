@@ -23,6 +23,8 @@
 
 @property (nonatomic, strong) SPItem *item;
 
+-(id)initForNewItem:(BOOL)isNew;
+
 - (IBAction)takePicture:(id)sender;
 - (IBAction)backgroundTapped:(id)sender;
 

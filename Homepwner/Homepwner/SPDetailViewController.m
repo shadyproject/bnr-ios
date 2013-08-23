@@ -15,6 +15,32 @@
 @synthesize item;
 
 #pragma mark -
+#pragma mark Initializers
+-(id)initForNewItem:(BOOL)isNew{
+    self = [super initWithNibName:@"SPDetailViewController" bundle:nil];
+    
+    if (self) {
+        if (isNew) {
+            UIBarButtonItem *doneItem =
+                [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
+            
+            [self.navigationItem setRightBarButtonItem:doneItem];
+            
+            UIBarButtonItem *cancelItem =
+                [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+            
+            [self.navigationItem setLeftBarButtonItem:cancelItem];
+        }
+    }
+    
+    return self;
+}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    @throw [NSException exceptionWithName:@"Wrong Initializer" reason:@"Use initForNewItem" userInfo:nil];
+}
+
+#pragma mark -
 #pragma mark Overrides
 
 - (void)viewDidLoad {
