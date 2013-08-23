@@ -20,6 +20,10 @@
     SPDetailViewController *dvc = [[SPDetailViewController alloc] initForNewItem:YES];
     dvc.item = item;
     
+    dvc.dismissBlock = ^{
+        [[self tableView] reloadData];
+    };
+    
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dvc];
     [navController setModalPresentationStyle:UIModalPresentationFormSheet];
     
