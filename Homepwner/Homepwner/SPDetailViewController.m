@@ -9,6 +9,7 @@
 #import "SPDetailViewController.h"
 #import "SPItem.h"
 #import "SPImageStore.h"
+#import "SPItemStore.h"
 
 @implementation SPDetailViewController
 
@@ -182,5 +183,17 @@
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
     DLog(@"User dismissed popover");
     imgPickerPopover = nil;
+}
+
+#pragma mark -
+#pragma mark Instance Methods
+-(void)save:(id)sender{
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)cancel:(id)sender{
+    [[SPItemStore sharedStore] removeItem:self.item];
+    
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 @end
