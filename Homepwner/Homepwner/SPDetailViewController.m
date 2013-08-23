@@ -62,6 +62,19 @@
 }
 
 #pragma mark -
+#pragma mark UIViewController Overrides
+//note that these only work in 6.0
+//the 5.0 and below way of doing this is to override shouldAutorotateToInterfaceOrientation
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
+
+#pragma mark -
 #pragma mark IBActions
 - (IBAction)takePicture:(id)sender {
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
