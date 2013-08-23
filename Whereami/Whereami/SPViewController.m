@@ -120,4 +120,24 @@
     [locationManager stopUpdatingLocation];
 }
 
+#pragma mark -
+#pragma mark UIViewController Overrides
+-(BOOL)shouldAutorotate{
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
+}
+
+//note that these only work in 6.0
+//the 5.0 and below way of doing this is to override shouldAutorotateToInterfaceOrientation
+-(NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
 @end
