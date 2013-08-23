@@ -25,8 +25,7 @@
     };
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dvc];
-    [navController setModalPresentationStyle:UIModalPresentationFormSheet];
-    [navController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [navController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
     
     [self presentViewController:navController animated:YES completion:nil];
 }
