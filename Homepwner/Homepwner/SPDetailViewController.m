@@ -10,6 +10,7 @@
 #import "SPItem.h"
 #import "SPImageStore.h"
 #import "SPItemStore.h"
+#import "SPUIPopoverCustom.h"
 
 @implementation SPDetailViewController
 
@@ -130,6 +131,7 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         imgPickerPopover = [[UIPopoverController alloc] initWithContentViewController:imgPicker];
         [imgPickerPopover setDelegate:self];
+        [imgPickerPopover setPopoverBackgroundViewClass:[SPUIPopoverCustom class]];
         
         [imgPickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     } else {

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D27F51017C80DCB006B9AD8 /* SPUIPopoverCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F50F17C80DCB006B9AD8 /* SPUIPopoverCustom.m */; };
+		2D27F51B17C8559F006B9AD8 /* popover-black-bcg-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51117C82693006B9AD8 /* popover-black-bcg-image.png */; };
+		2D27F51C17C855A5006B9AD8 /* popover-black-bcg-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51217C82693006B9AD8 /* popover-black-bcg-image@2x.png */; };
+		2D27F51D17C855A5006B9AD8 /* popover-black-bottom-arrow-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51317C82693006B9AD8 /* popover-black-bottom-arrow-image.png */; };
+		2D27F51E17C855A5006B9AD8 /* popover-black-bottom-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51417C82693006B9AD8 /* popover-black-bottom-arrow-image@2x.png */; };
+		2D27F51F17C855A5006B9AD8 /* popover-black-left-arrow-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51517C82693006B9AD8 /* popover-black-left-arrow-image.png */; };
+		2D27F52017C855A5006B9AD8 /* popover-black-left-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51617C82693006B9AD8 /* popover-black-left-arrow-image@2x.png */; };
+		2D27F52117C855A5006B9AD8 /* popover-black-right-arrow-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51717C82693006B9AD8 /* popover-black-right-arrow-image.png */; };
+		2D27F52217C855A5006B9AD8 /* popover-black-right-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51817C82693006B9AD8 /* popover-black-right-arrow-image@2x.png */; };
+		2D27F52317C855A5006B9AD8 /* popover-black-top-arrow-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51917C82693006B9AD8 /* popover-black-top-arrow-image.png */; };
+		2D27F52417C855A5006B9AD8 /* popover-black-top-arrow-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D27F51A17C82693006B9AD8 /* popover-black-top-arrow-image@2x.png */; };
+		2D27F52517C855A5006B9AD8 /* overlaygraphic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DF7EE17BC77820035195D /* overlaygraphic.png */; };
 		2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */; };
 		2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */; };
 		2D448DB61755988C00E29B39 /* SPImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D448DB51755988C00E29B39 /* SPImageStore.m */; };
@@ -25,6 +37,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D27F50E17C80DCB006B9AD8 /* SPUIPopoverCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUIPopoverCustom.h; sourceTree = "<group>"; };
+		2D27F50F17C80DCB006B9AD8 /* SPUIPopoverCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUIPopoverCustom.m; sourceTree = "<group>"; };
+		2D27F51117C82693006B9AD8 /* popover-black-bcg-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bcg-image.png"; sourceTree = "<group>"; };
+		2D27F51217C82693006B9AD8 /* popover-black-bcg-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bcg-image@2x.png"; sourceTree = "<group>"; };
+		2D27F51317C82693006B9AD8 /* popover-black-bottom-arrow-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bottom-arrow-image.png"; sourceTree = "<group>"; };
+		2D27F51417C82693006B9AD8 /* popover-black-bottom-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-bottom-arrow-image@2x.png"; sourceTree = "<group>"; };
+		2D27F51517C82693006B9AD8 /* popover-black-left-arrow-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-left-arrow-image.png"; sourceTree = "<group>"; };
+		2D27F51617C82693006B9AD8 /* popover-black-left-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-left-arrow-image@2x.png"; sourceTree = "<group>"; };
+		2D27F51717C82693006B9AD8 /* popover-black-right-arrow-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-right-arrow-image.png"; sourceTree = "<group>"; };
+		2D27F51817C82693006B9AD8 /* popover-black-right-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-right-arrow-image@2x.png"; sourceTree = "<group>"; };
+		2D27F51917C82693006B9AD8 /* popover-black-top-arrow-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-top-arrow-image.png"; sourceTree = "<group>"; };
+		2D27F51A17C82693006B9AD8 /* popover-black-top-arrow-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-black-top-arrow-image@2x.png"; sourceTree = "<group>"; };
 		2D361E4D16E5ADB000723C42 /* SPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDetailViewController.h; sourceTree = "<group>"; };
 		2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDetailViewController.m; sourceTree = "<group>"; };
 		2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDetailViewController.xib; sourceTree = "<group>"; };
@@ -107,6 +131,16 @@
 		2D7D6EBF16BBBB4400F8B98C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D27F51117C82693006B9AD8 /* popover-black-bcg-image.png */,
+				2D27F51217C82693006B9AD8 /* popover-black-bcg-image@2x.png */,
+				2D27F51317C82693006B9AD8 /* popover-black-bottom-arrow-image.png */,
+				2D27F51417C82693006B9AD8 /* popover-black-bottom-arrow-image@2x.png */,
+				2D27F51517C82693006B9AD8 /* popover-black-left-arrow-image.png */,
+				2D27F51617C82693006B9AD8 /* popover-black-left-arrow-image@2x.png */,
+				2D27F51717C82693006B9AD8 /* popover-black-right-arrow-image.png */,
+				2D27F51817C82693006B9AD8 /* popover-black-right-arrow-image@2x.png */,
+				2D27F51917C82693006B9AD8 /* popover-black-top-arrow-image.png */,
+				2D27F51A17C82693006B9AD8 /* popover-black-top-arrow-image@2x.png */,
 				2D7DF7EE17BC77820035195D /* overlaygraphic.png */,
 				2D7D6EC016BBBB4400F8B98C /* Homepwner-Info.plist */,
 				2D7D6EC116BBBB4400F8B98C /* InfoPlist.strings */,
@@ -122,6 +156,7 @@
 		2D7D6ED516BBBB5700F8B98C /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2D27F50E17C80DCB006B9AD8 /* SPUIPopoverCustom.h */,
 				2D448DB41755988C00E29B39 /* SPImageStore.h */,
 				2D361E4D16E5ADB000723C42 /* SPDetailViewController.h */,
 				2D7D6EDB16C3575700F8B98C /* SPItem.h */,
@@ -135,6 +170,7 @@
 		2D7D6ED616BBBB6100F8B98C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2D27F50F17C80DCB006B9AD8 /* SPUIPopoverCustom.m */,
 				2D448DB51755988C00E29B39 /* SPImageStore.m */,
 				2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */,
 				2D7D6EDC16C3575700F8B98C /* SPItem.m */,
@@ -210,10 +246,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D27F52417C855A5006B9AD8 /* popover-black-top-arrow-image@2x.png in Resources */,
+				2D27F51F17C855A5006B9AD8 /* popover-black-left-arrow-image.png in Resources */,
 				2D7D6EC316BBBB4400F8B98C /* InfoPlist.strings in Resources */,
+				2D27F52117C855A5006B9AD8 /* popover-black-right-arrow-image.png in Resources */,
 				2D7D6ECB16BBBB4400F8B98C /* Default.png in Resources */,
+				2D27F52517C855A5006B9AD8 /* overlaygraphic.png in Resources */,
+				2D27F52017C855A5006B9AD8 /* popover-black-left-arrow-image@2x.png in Resources */,
 				2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */,
+				2D27F51C17C855A5006B9AD8 /* popover-black-bcg-image@2x.png in Resources */,
 				2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */,
+				2D27F52217C855A5006B9AD8 /* popover-black-right-arrow-image@2x.png in Resources */,
+				2D27F51E17C855A5006B9AD8 /* popover-black-bottom-arrow-image@2x.png in Resources */,
+				2D27F51B17C8559F006B9AD8 /* popover-black-bcg-image.png in Resources */,
+				2D27F52317C855A5006B9AD8 /* popover-black-top-arrow-image.png in Resources */,
+				2D27F51D17C855A5006B9AD8 /* popover-black-bottom-arrow-image.png in Resources */,
 				2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +277,7 @@
 				2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */,
 				2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */,
 				2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */,
+				2D27F51017C80DCB006B9AD8 /* SPUIPopoverCustom.m in Sources */,
 				2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */,
 				2D448DB61755988C00E29B39 /* SPImageStore.m in Sources */,
 			);
