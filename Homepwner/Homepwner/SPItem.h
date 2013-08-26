@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SPItem : NSObject
+@interface SPItem : NSObject <NSCoding>
 
 #pragma mark Class Methods
 + (id) randomItem;
@@ -28,4 +28,8 @@
 @property (nonatomic, readonly) NSDate *dateCreated;
 
 @property (nonatomic, copy) NSString* imageKey;
+
+#pragma mark -
+#pragma mark Methods
+-(NSString*)itemArchivePath;
 @end

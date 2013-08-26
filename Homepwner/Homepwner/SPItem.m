@@ -74,6 +74,14 @@
     [item setContainer:self];
 }
 
+-(NSString*)itemArchivePath{
+    NSArray *documentDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *docDir = [documentDirs objectAtIndex:0];
+    
+    return [docDir stringByAppendingPathComponent:@"items.archvie"];
+}
+
 #pragma mark Overrides
 - (NSString *)description
 {
@@ -85,6 +93,31 @@
 - (void)dealloc
 {
     NSLog(@"Destroyed: %@", self);
+}
+
+#pragma mark -
+#pragma mark NSCoder Implementation
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:itemName forKey:@"itemName"];
+    [aCoder encodeObject:serialNumber forKey:@"serialNumber"];
+    [aCoder encodeObject:dateCreated forKey:@"dateCreated"];
+    [aCoder encodeObject:imageKey forKey:@"imageKey"];
+    
+    [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if (self) {
+        self.itemName = [aDecoder decodeObjectForKey:@"itemName"];
+        self.serialNumber = [aDecoder decodeObjectForKey:@"serialNumber"];
+        self.imageKey = [aDecoder decodeObjectForKey:@"imageKey"];
+        self.valueInDollars = [aDecoder decodeIntForKey:@"valueInDollars"];
+        
+        dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
+    }
+    
+    return self;
 }
 
 @end
