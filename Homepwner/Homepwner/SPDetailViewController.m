@@ -119,8 +119,6 @@
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [imgPicker setSourceType:UIImagePickerControllerSourceTypeCamera];
-        UIImageView* overlayView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlaygraphic.png"]];
-        [imgPicker setCameraOverlayView:overlayView];
     } else {
         [imgPicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
