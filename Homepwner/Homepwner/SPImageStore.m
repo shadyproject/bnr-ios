@@ -30,7 +30,7 @@
 -(id)init{
     self = [super init];
     if (self) {
-        dictionary = [[NSMutableDictionary alloc] init];
+        dictionary = [@{} mutableCopy];
     }
     
     return self;
