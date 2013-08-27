@@ -50,7 +50,7 @@
     
     //save the image to the filesytem
     NSString *imgPath = [self imagePathForKey:key];
-    NSData *imgData = UIImageJPEGRepresentation(img, 0.5);
+    NSData *imgData = UIImagePNGRepresentation(img);
     [imgData writeToFile:imgPath atomically:YES];
 }
 
