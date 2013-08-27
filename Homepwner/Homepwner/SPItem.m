@@ -12,7 +12,7 @@
 
 #pragma mark Property Synthesizers
 @synthesize itemName;
-@synthesize containedItem, container, serialNumber, valueInDollars, dateCreated;
+@synthesize serialNumber, valueInDollars, dateCreated;
 @synthesize imageKey;
 
 #pragma mark Class Methods
@@ -65,13 +65,6 @@
     }
     
     return self;
-}
-
-#pragma mark Method Implementations
-- (void)setContainedItem:(SPItem *)item
-{
-    containedItem = item;
-    [item setContainer:self];
 }
 
 #pragma mark Overrides

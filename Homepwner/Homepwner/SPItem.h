@@ -18,10 +18,6 @@
       serialNumber:(NSString *)num
        dollarValue:(int)value;
 
-#pragma mark Properties
-@property (nonatomic, strong) SPItem *containedItem;
-@property (nonatomic, weak) SPItem *container;
-
 @property (nonatomic, copy) NSString *itemName;
 @property (nonatomic, copy) NSString *serialNumber;
 @property (nonatomic) int valueInDollars;
