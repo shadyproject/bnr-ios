@@ -21,4 +21,6 @@
 - (SPItem *)createItem;
 - (void)removeItem:(SPItem *)item;
 - (void)moveItemAtIndex:(int)from toIndex:(int)to;
+-(BOOL)saveChanges;
+-(NSString*)itemArchivePath;
 @end

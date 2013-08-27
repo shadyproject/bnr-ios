@@ -44,6 +44,19 @@
     [allItems insertObject:item atIndex:to];
 }
 
+-(NSString*)itemArchivePath{
+    NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [docDirs objectAtIndex:0];
+    
+    return [docDir stringByAppendingPathComponent:@"items.archive"];
+}
+
+-(BOOL)saveChanges{
+    NSString *path = [self itemArchivePath];
+    
+    return [NSKeyedArchiver archiveRootObject:allItems toFile:path];
+}
+
 #pragma mark -
 #pragma mark Overrides
 + (id)allocWithZone:(NSZone *)zone {
