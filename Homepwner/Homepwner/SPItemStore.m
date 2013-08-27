@@ -71,7 +71,7 @@
     self = [super init];
     
     if (self) {
-        NSString *path = [self itemArchivePath];
+       NSString *path = [self itemArchivePath];
         allItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         
         if (!allItems) {
