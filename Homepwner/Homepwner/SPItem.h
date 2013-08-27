@@ -29,7 +29,4 @@
 
 @property (nonatomic, copy) NSString* imageKey;
 
-#pragma mark -
-#pragma mark Methods
--(NSString*)itemArchivePath;
 @end

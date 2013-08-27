@@ -74,14 +74,6 @@
     [item setContainer:self];
 }
 
--(NSString*)itemArchivePath{
-    NSArray *documentDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *docDir = [documentDirs objectAtIndex:0];
-    
-    return [docDir stringByAppendingPathComponent:@"items.archvie"];
-}
-
 #pragma mark Overrides
 - (NSString *)description
 {
