@@ -71,7 +71,7 @@
         allItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         
         if (!allItems) {
-            allItems = [[NSMutableArray alloc] init];
+            allItems = [@[] mutableCopy]; //woo collection literals
         }
     }
 

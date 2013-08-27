@@ -16,13 +16,12 @@
 @synthesize imageKey;
 
 #pragma mark Class Methods
-+ (id)randomItem
-{
++(id)randomItem{
     //set up some random adjectives
-    NSArray *adjectives = [NSArray arrayWithObjects:@"Spikey", @"Tasty", @"Rough", nil];
+    NSArray *adjectives = @[@"Spikey", @"Tasty", @"Rough"];
     
     //and now, some nouns
-    NSArray *nouns = [NSArray arrayWithObjects:@"Sofa", @"Table", @"Musket", nil];
+    NSArray *nouns = @[@"Sofa", @"Table", @"Musket"];
     
     //get some random indexes
     NSInteger adjIdx = random() % [adjectives count];
@@ -46,17 +45,14 @@
 }
 
 #pragma mark Initializer Implementation
-- (id)init
-{
+-(id)init{
     return [self initWithName:@"Default Name" serialNumber:@"0" dollarValue:0];
 }
 
-- (id)initWithName:(NSString *)name serialNumber:(NSString *)num dollarValue:(int)value
-{
+-(id)initWithName:(NSString *)name serialNumber:(NSString *)num dollarValue:(int)value{
     self = [super init];
     
-    if (self)
-    {
+    if (self){
         itemName = name;
         serialNumber = num;
         valueInDollars = value;
@@ -68,16 +64,14 @@
 }
 
 #pragma mark Overrides
-- (NSString *)description
-{
+-(NSString *)description{
     NSString *desc =[NSString stringWithFormat:@"%@ (%@) Worth %i Created:%@",
                      itemName, serialNumber, valueInDollars, dateCreated];
     return desc;
 }
 
-- (void)dealloc
-{
-    NSLog(@"Destroyed: %@", self);
+-(void)dealloc{
+    DLog(@"Destroyed: %@", self);
 }
 
 #pragma mark -
