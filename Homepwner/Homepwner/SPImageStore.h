@@ -8,15 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SPImageStore : NSObject
-{
+@interface SPImageStore : NSObject{
     NSMutableDictionary *dictionary;
 }
 
-+ (SPImageStore *)sharedStore;
++(SPImageStore *)sharedStore;
 
-- (void)setImage: (UIImage *)img forKey: (NSString *)key;
-- (UIImage *)imageForKey:(NSString *)key;
-- (void)deleteImageForKey:(NSString *)key;
-
+-(void)setImage: (UIImage *)img forKey: (NSString *)key;
+-(UIImage *)imageForKey:(NSString *)key;
+-(void)deleteImageForKey:(NSString *)key;
+-(NSString*)imagePathForKey:(NSString*)key;
 @end

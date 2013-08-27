@@ -40,18 +40,45 @@
 #pragma mark Instance Methods
 -(void)setImage:(UIImage *)img forKey:(NSString *)key{
     [dictionary setObject:img forKey:key];
+    
+    //save the image to the filesytem
+    NSString *imgPath = [self imagePathForKey:key];
+    NSData *imgData = UIImageJPEGRepresentation(img, 0.5);
+    [imgData writeToFile:imgPath atomically:YES];
 }
 
 -(UIImage*)imageForKey:(NSString *)key{
-    return [dictionary objectForKey:key];
+    UIImage *img = dictionary[key];
+    
+    if (!img) {
+        img = [UIImage imageWithContentsOfFile:[self imagePathForKey:key]];
+        
+        if (img) {
+            dictionary[key] = img;
+        }else{
+            DLog(@"Could not find image %@", [self imagePathForKey:key]);
+        }
+    }
+    
+    return img;
 }
 
 -(void)deleteImageForKey:(NSString *)key{
-    
     if (!key) {
         return;
     }
     
     [dictionary removeObjectForKey:key];
+    NSString *imgPath = [self imagePathForKey:key];
+    [[NSFileManager defaultManager] removeItemAtPath:imgPath error:NULL];
+}
+
+-(NSString*)imagePathForKey:(NSString *)key{
+    NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                           NSUserDomainMask,
+                                                           YES);
+    NSString *docDir = docDirs[0];
+    
+    return [docDir stringByAppendingPathComponent:key];
 }
 @end

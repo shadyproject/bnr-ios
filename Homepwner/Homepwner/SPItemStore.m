@@ -7,6 +7,7 @@
 //
 
 #import "SPItemStore.h"
+#import "SPImageStore.h"
 #import "SPItem.h"
 
 @implementation SPItemStore
@@ -25,7 +26,7 @@
     return allItems;
 }
 
-- (SPItem *)createItem {
+-(SPItem *)createItem{
     SPItem *item = [[SPItem alloc] init];
     
     [allItems addObject:item];
@@ -33,7 +34,10 @@
     return item;
 }
 
-- (void)removeItem:(SPItem *)item {
+-(void)removeItem:(SPItem *)item{
+    NSString *key = item.imageKey;
+    [[SPImageStore sharedStore] deleteImageForKey:key];
+    
     [allItems removeObjectIdenticalTo:item];
 }
 
