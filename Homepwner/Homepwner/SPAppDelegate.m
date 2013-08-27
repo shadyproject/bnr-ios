@@ -13,8 +13,6 @@
 
 @implementation SPAppDelegate
 
-
-
 #pragma mark -
 #pragma mark Application Delegate Notifications
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
