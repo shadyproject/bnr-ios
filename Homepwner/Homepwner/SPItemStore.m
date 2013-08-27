@@ -26,7 +26,7 @@
 }
 
 - (SPItem *)createItem {
-    SPItem *item = [SPItem randomItem];
+    SPItem *item = [[SPItem alloc] init];
     
     [allItems addObject:item];
     
@@ -67,7 +67,12 @@
     self = [super init];
     
     if (self) {
-        allItems = [[NSMutableArray alloc] init];
+        NSString *path = [self itemArchivePath];
+        allItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        
+        if (!allItems) {
+            allItems = [[NSMutableArray alloc] init];
+        }
     }
 
     return self;
