@@ -11,6 +11,8 @@
 #import "SPItemStore.h"
 #import "SPHomepwnerItemCell.h"
 
+const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
+
 @implementation SPItemsViewController
 
 #pragma mark -

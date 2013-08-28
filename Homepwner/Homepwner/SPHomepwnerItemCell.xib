@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujG-0G-Afh">
-                        <rect key="frame" x="66" y="4" width="96" height="21"/>
+                        <rect key="frame" x="66" y="4" width="184" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,10 +40,10 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cellImage" destination="L1t-Ov-a7k" id="Fz1-ZN-IDr"/>
-                <outlet property="serialNumberLabel" destination="jaL-7L-TUQ" id="uga-yz-4GX"/>
-                <outlet property="titleLabel" destination="ujG-0G-Afh" id="RQJ-gp-WOJ"/>
-                <outlet property="valueLabel" destination="GHb-O3-yK5" id="Qcb-kR-y9G"/>
+                <outlet property="nameLabel" destination="ujG-0G-Afh" id="zLj-YI-ALV"/>
+                <outlet property="serialNumberLabel" destination="jaL-7L-TUQ" id="dq7-nc-raM"/>
+                <outlet property="thumbnailView" destination="L1t-Ov-a7k" id="Nmr-ck-8gd"/>
+                <outlet property="valueLabel" destination="GHb-O3-yK5" id="671-IS-2SJ"/>
             </connections>
         </tableViewCell>
     </objects>
