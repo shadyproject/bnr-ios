@@ -39,6 +39,12 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="cellImage" destination="L1t-Ov-a7k" id="Fz1-ZN-IDr"/>
+                <outlet property="serialNumberLabel" destination="jaL-7L-TUQ" id="uga-yz-4GX"/>
+                <outlet property="titleLabel" destination="ujG-0G-Afh" id="RQJ-gp-WOJ"/>
+                <outlet property="valueLabel" destination="GHb-O3-yK5" id="Qcb-kR-y9G"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
