@@ -107,9 +107,9 @@
 {
     CLLocationCoordinate2D coord = [loc coordinate];
     
-    SPMapPoint *mp = [[SPMapPoint alloc] initWithCoordinates:coord title:[locationTitleField text]];
+    currentLocation = [[SPMapPoint alloc] initWithCoordinates:coord title:[locationTitleField text]];
     
-    [worldView addAnnotation:mp];
+    [worldView addAnnotation:currentLocation];
     
     MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
     [worldView setRegion:reg];
