@@ -9,6 +9,7 @@
 #import "SPItemsViewController.h"
 #import "SPItem.h"
 #import "SPItemStore.h"
+#import "SPHomepwnerItemCell.h"
 
 @implementation SPItemsViewController
 
@@ -48,18 +49,14 @@
     return [[SPItemStore sharedStore] allItems].count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:@"UITableViewCell-Default"];
-    
-    if (!cell) {
-        cell =
-            [[UITableViewCell alloc]
-                initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell-Default"];
-    }
-    
+-(UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [item description];
+    SPHomepwnerItemCell *cell = [tv dequeueReusableCellWithIdentifier:@"SPHomepwnerItemCell"];
+    
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     
     return cell;
 }
@@ -126,5 +123,13 @@
     [super viewWillAppear:animated];
     
     [self.tableView reloadData];
+}
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"SPHomepwnerItemCell" bundle:nil];
+    
+    [[self tableView] registerNib:nib forCellReuseIdentifier:@"SPHomepwnerItemCell"];
 }
 @end
