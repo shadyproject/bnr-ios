@@ -23,6 +23,7 @@
 		2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDC16C3575700F8B98C /* SPItem.m */; };
 		2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */; };
 		2D91862617CE9527004A0452 /* SPHomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */; };
+		2D91862817CE95AD004A0452 /* SPHomepwnerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemStore.m; sourceTree = "<group>"; };
 		2D91862417CE9527004A0452 /* SPHomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHomepwnerItemCell.h; sourceTree = "<group>"; };
 		2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHomepwnerItemCell.m; sourceTree = "<group>"; };
+		2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPHomepwnerItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */,
+				2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */,
 				2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */,
 				2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */,
+				2D91862817CE95AD004A0452 /* SPHomepwnerItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
