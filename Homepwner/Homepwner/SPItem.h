@@ -24,5 +24,9 @@
 @property (nonatomic, readonly) NSDate *dateCreated;
 
 @property (nonatomic, copy) NSString* imageKey;
+@property (nonatomic, strong) UIImage *thumbnail;
+@property (nonatomic, strong) NSData *thumbnailData;
+
+-(void)setThubmnailDataFromImage:(UIImage *)img;
 
 @end
