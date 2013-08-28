@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface SPMapPoint : NSObject <MKAnnotation>
+@interface SPMapPoint : NSObject <MKAnnotation, NSCoding>
 
 - (id)initWithCoordinates:(CLLocationCoordinate2D)c title:(NSString *)t;
 
