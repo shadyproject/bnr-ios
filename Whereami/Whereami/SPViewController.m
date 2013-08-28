@@ -17,6 +17,7 @@
 #pragma mark Synthesize properties
 @synthesize locationManager;
 @synthesize worldView, activityIndicator, locationTitleField;
+@synthesize currentLocation;
 
 #pragma mark CLLocationDelegate Methods
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
@@ -58,7 +59,6 @@
 #pragma mark UITextFieldDelegate methods
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    //todo implement me
     [self findLocation];
     
     [textField resignFirstResponder];
@@ -118,6 +118,20 @@
     [activityIndicator stopAnimating];
     [locationTitleField setHidden:NO];
     [locationManager stopUpdatingLocation];
+}
+
+-(NSString*)archivePath{
+    NSArray *dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDirectory, YES);
+    
+    NSString *dir = dirs[0];
+    
+    return [dir stringByAppendingPathComponent:@"lastLocation.loc"];
+}
+
+-(BOOL)saveLocation{
+    NSString *savePath = [self archivePath];
+    
+    return [NSKeyedArchiver archiveRootObject:currentLocation toFile:savePath];
 }
 
 #pragma mark -

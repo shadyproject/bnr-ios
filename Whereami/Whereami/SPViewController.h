@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+@class SPMapPoint;
+
 @interface SPViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
 
 @property CLLocationManager *locationManager;
@@ -17,7 +19,11 @@
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UITextField *locationTitleField;
 
+@property (strong, nonatomic) SPMapPoint *currentLocation;
+
 
 - (void)findLocation;
 - (void)foundLocation:(CLLocation *)loc;
+
+-(BOOL)saveLocation;
 @end
