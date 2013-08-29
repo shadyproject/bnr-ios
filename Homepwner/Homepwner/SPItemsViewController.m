@@ -10,6 +10,8 @@
 #import "SPItem.h"
 #import "SPItemStore.h"
 #import "SPHomepwnerItemCell.h"
+#import "SPImageStore.h"
+#import "SPImageViewController.h"
 
 const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
 
@@ -143,5 +145,36 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
 #pragma mark Instance Methods
 -(void)showImage:(id)sender atIndexPath:(NSIndexPath*)ip{
     DLog(@"Asked to show image at imagePath %@", ip);
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        SPItem *item  = [[[SPItemStore sharedStore] allItems] objectAtIndex:ip.row];
+        
+        NSString *imgKey = item.imageKey;
+        
+        //don't display anything if no image
+        UIImage *img = [[SPImageStore sharedStore] imageForKey:imgKey];
+        
+        if (!img) {
+            return;
+        }
+        
+        CGRect rect = [self.view convertRect:[sender bounds] fromView:sender];
+        
+        SPImageViewController *ivc = [[SPImageViewController alloc] init];
+        ivc.image = img;
+        
+        //600x600 popover rect
+        imagePopover = [[UIPopoverController alloc] initWithContentViewController:ivc];
+        imagePopover.delegate = self;
+        imagePopover.popoverContentSize = CGSizeMake(600, 600);
+        [imagePopover presentPopoverFromRect:rect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+}
+
+#pragma mark -
+#pragma mark Popover Delegate Methods
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
+    [imagePopover dismissPopoverAnimated:YES];
+    imagePopover = nil;
 }
 @end

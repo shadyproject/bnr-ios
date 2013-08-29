@@ -10,7 +10,9 @@
 #import "SPDetailViewController.h"
 
 @interface SPItemsViewController : UITableViewController
+            <UIPopoverControllerDelegate>
 {
+    UIPopoverController *imagePopover;
 }
 
 - (IBAction)addNewItem:(id)sender;
