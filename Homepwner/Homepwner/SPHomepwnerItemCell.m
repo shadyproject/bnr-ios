@@ -24,4 +24,7 @@
     // Configure the view for the selected state
 }
 
+-(IBAction)showImage:(id)sender{
+    DLog(@"User tapped image");
+}
 @end
