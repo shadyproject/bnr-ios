@@ -8,11 +8,18 @@
 
 #import "SPImageViewController.h"
 
-@interface SPImageViewController ()
-
-@end
-
 @implementation SPImageViewController
+
+@synthesize image;
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    CGSize s = [self.image size];
+    [_scrollView setContentSize:s]; //go go auto-synthesis
+    [_imageView setFrame:CGRectMake(0, 0, s.width, s.height)];
+    _imageView.image = image;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

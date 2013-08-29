@@ -10,4 +10,9 @@
 
 @interface SPImageViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (strong, nonatomic) UIImage *image;
+
 @end

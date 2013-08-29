@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPImageViewController">
             <connections>
+                <outlet property="imageView" destination="mfo-Q8-553" id="s7v-Qt-tPq"/>
+                <outlet property="scrollView" destination="eUu-Rs-gVT" id="9Xg-hF-9Py"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
