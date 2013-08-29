@@ -56,6 +56,9 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
     
     SPHomepwnerItemCell *cell = [tv dequeueReusableCellWithIdentifier:@"SPHomepwnerItemCell"];
     
+    cell.tableView = self.tableView;
+    cell.controller = self;
+    
     cell.nameLabel.text = item.itemName;
     cell.serialNumberLabel.text = item.serialNumber;
     cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
@@ -134,5 +137,11 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
     UINib *nib = [UINib nibWithNibName:@"SPHomepwnerItemCell" bundle:nil];
     
     [[self tableView] registerNib:nib forCellReuseIdentifier:@"SPHomepwnerItemCell"];
+}
+
+#pragma mark -
+#pragma mark Instance Methods
+-(void)showImage:(id)sender atIndexPath:(NSIndexPath*)ip{
+    DLog(@"Asked to show image at imagePath %@", ip);
 }
 @end
