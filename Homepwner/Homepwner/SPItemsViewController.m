@@ -66,6 +66,13 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
     cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     cell.thumbnailView.image = item.thumbnail;
     
+    //todo not sure if this is the best place to put this
+    if (item.valueInDollars >= 50) {
+        cell.nameLabel.textColor = [UIColor greenColor];
+    }else{
+        cell.nameLabel.textColor = [UIColor redColor];
+    }
+    
     return cell;
 }
 
