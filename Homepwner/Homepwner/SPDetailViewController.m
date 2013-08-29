@@ -156,6 +156,8 @@
     }
     UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
     
+    [item setThubmnailDataFromImage:img];
+    
     CFUUIDRef newImageId = CFUUIDCreate(kCFAllocatorDefault);
     CFStringRef idString = CFUUIDCreateString(kCFAllocatorDefault, newImageId);
     //hooray for toll free bridging

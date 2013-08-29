@@ -82,8 +82,8 @@
     [aCoder encodeObject:serialNumber forKey:@"serialNumber"];
     [aCoder encodeObject:dateCreated forKey:@"dateCreated"];
     [aCoder encodeObject:imageKey forKey:@"imageKey"];
-    
     [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
+    [aCoder encodeObject:thumbnailData forKey:@"thumbnailData"];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
@@ -95,6 +95,8 @@
         self.valueInDollars = [aDecoder decodeIntForKey:@"valueInDollars"];
         
         dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
+        thumbnailData = [aDecoder decodeObjectForKey:@"thumbnailData"];
+        thumbnail = [UIImage imageWithData:thumbnailData];
     }
     
     return self;
