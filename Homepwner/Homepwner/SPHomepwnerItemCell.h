@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPForwardingTableCell.h"
 
-@interface SPHomepwnerItemCell : UITableViewCell
+@interface SPHomepwnerItemCell: SPForwardingTableCell
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
