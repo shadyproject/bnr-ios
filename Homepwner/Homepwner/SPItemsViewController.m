@@ -10,10 +10,9 @@
 #import "SPItem.h"
 #import "SPItemStore.h"
 #import "SPHomepwnerItemCell.h"
+#import "SPItemStepper.h"
 #import "SPImageStore.h"
 #import "SPImageViewController.h"
-
-const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
 
 @implementation SPItemsViewController
 
@@ -56,7 +55,8 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
 -(UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:indexPath.row];
     
-    SPHomepwnerItemCell *cell = [tv dequeueReusableCellWithIdentifier:@"SPHomepwnerItemCell"];
+    //SPHomepwnerItemCell *cell = [tv dequeueReusableCellWithIdentifier:@"SPHomepwnerItemCell"];
+    SPItemStepper *cell = [tv dequeueReusableCellWithIdentifier:@"SPItemStepperCell"];
     
     cell.tableView = self.tableView;
     cell.controller = self;
@@ -64,7 +64,10 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
     cell.nameLabel.text = item.itemName;
     cell.serialNumberLabel.text = item.serialNumber;
     cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
-    cell.thumbnailView.image = item.thumbnail;
+    cell.imageView.image = item.thumbnail;
+    cell.valueStepper.value = item.valueInDollars;
+    cell.valueStepper.minimumValue = 0;
+    cell.valueStepper.maximumValue = INT32_MAX; //that's a lot of dollars
     
     return cell;
 }
@@ -137,8 +140,10 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
     [super viewDidLoad];
     
     UINib *nib = [UINib nibWithNibName:@"SPHomepwnerItemCell" bundle:nil];
-    
     [[self tableView] registerNib:nib forCellReuseIdentifier:@"SPHomepwnerItemCell"];
+    
+    nib = [UINib nibWithNibName:@"SPItemStepper" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"SPItemStepperCell"];
 }
 
 #pragma mark -
@@ -169,6 +174,16 @@ const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
         imagePopover.popoverContentSize = CGSizeMake(600, 600);
         [imagePopover presentPopoverFromRect:rect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     }
+}
+
+-(void)updateValue:(id)sender atIndexPath:(NSIndexPath*)ip{
+    DLog(@"Asked to step value for cell at image path %@", ip);
+    
+    SPItem *item = [[[SPItemStore sharedStore] allItems] objectAtIndex:ip.row];
+    
+    item.valueInDollars = [(UIStepper*)sender value];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark -
