@@ -10,7 +10,6 @@
 
 @implementation SPHomepwnerItemCell
 
-@synthesize controller;
 @synthesize tableView;
 
 -(IBAction)showImage:(id)sender{
