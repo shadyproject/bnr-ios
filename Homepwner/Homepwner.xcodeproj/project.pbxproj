@@ -13,6 +13,7 @@
 		2D7077F717CFECDD004C1135 /* SPImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7077F517CFECDD004C1135 /* SPImageViewController.m */; };
 		2D7077F817CFECDD004C1135 /* SPImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7077F617CFECDD004C1135 /* SPImageViewController.xib */; };
 		2D7077FB17D01E71004C1135 /* SPForwardingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7077FA17D01E71004C1135 /* SPForwardingTableCell.m */; };
+		2D7077FE17D0220A004C1135 /* SPItemStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7077FD17D0220A004C1135 /* SPItemStepper.m */; };
 		2D7D6EB916BBBB4400F8B98C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EB816BBBB4400F8B98C /* UIKit.framework */; };
 		2D7D6EBB16BBBB4400F8B98C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EBA16BBBB4400F8B98C /* Foundation.framework */; };
 		2D7D6EBD16BBBB4400F8B98C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EBC16BBBB4400F8B98C /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 		2D7077F617CFECDD004C1135 /* SPImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPImageViewController.xib; sourceTree = "<group>"; };
 		2D7077F917D01E71004C1135 /* SPForwardingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPForwardingTableCell.h; sourceTree = "<group>"; };
 		2D7077FA17D01E71004C1135 /* SPForwardingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPForwardingTableCell.m; sourceTree = "<group>"; };
+		2D7077FC17D0220A004C1135 /* SPItemStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemStepper.h; sourceTree = "<group>"; };
+		2D7077FD17D0220A004C1135 /* SPItemStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemStepper.m; sourceTree = "<group>"; };
 		2D7D6EB516BBBB4400F8B98C /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D6EB816BBBB4400F8B98C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D7D6EBA16BBBB4400F8B98C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,7 @@
 				2D7D6ED816BE6B7D00F8B98C /* SPItemsViewController.h */,
 				2D7077F417CFECDD004C1135 /* SPImageViewController.h */,
 				2D7077F917D01E71004C1135 /* SPForwardingTableCell.h */,
+				2D7077FC17D0220A004C1135 /* SPItemStepper.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -149,6 +153,7 @@
 		2D7D6ED616BBBB6100F8B98C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2D7077FD17D0220A004C1135 /* SPItemStepper.m */,
 				2D7077FA17D01E71004C1135 /* SPForwardingTableCell.m */,
 				2D7077F517CFECDD004C1135 /* SPImageViewController.m */,
 				2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */,
@@ -253,6 +258,7 @@
 				2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */,
 				2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */,
 				2D7077FB17D01E71004C1135 /* SPForwardingTableCell.m in Sources */,
+				2D7077FE17D0220A004C1135 /* SPItemStepper.m in Sources */,
 				2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */,
 				2D448DB61755988C00E29B39 /* SPImageStore.m in Sources */,
 				2D91862617CE9527004A0452 /* SPHomepwnerItemCell.m in Sources */,
