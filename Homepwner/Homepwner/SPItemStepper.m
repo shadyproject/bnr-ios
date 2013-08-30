@@ -28,4 +28,19 @@
 }
 */
 
+-(IBAction)updateValue:(id)sender{
+    NSIndexPath *path = [self.tableView indexPathForCell:self];
+    
+    NSString *selector = NSStringFromSelector(_cmd);
+    selector = [selector stringByAppendingString:@"atIndexPath:"];
+    
+    SEL newSelector = NSSelectorFromString(selector);
+    
+    if (path) {
+        if([self.controller respondsToSelector:newSelector]){
+            [self.controller performSelector:newSelector withObject:sender withObject:path];
+        }
+    }
+}
+
 @end
