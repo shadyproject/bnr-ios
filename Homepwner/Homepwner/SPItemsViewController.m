@@ -13,8 +13,6 @@
 #import "SPImageStore.h"
 #import "SPImageViewController.h"
 
-const NSString *kSPTableCellID = @"SPHomepwnerTableCell";
-
 @implementation SPItemsViewController
 
 #pragma mark -
