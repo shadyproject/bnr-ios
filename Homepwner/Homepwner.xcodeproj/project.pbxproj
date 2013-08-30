@@ -14,6 +14,7 @@
 		2D7077F817CFECDD004C1135 /* SPImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7077F617CFECDD004C1135 /* SPImageViewController.xib */; };
 		2D7077FB17D01E71004C1135 /* SPForwardingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7077FA17D01E71004C1135 /* SPForwardingTableCell.m */; };
 		2D7077FE17D0220A004C1135 /* SPItemStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7077FD17D0220A004C1135 /* SPItemStepper.m */; };
+		2D70780017D02395004C1135 /* SPItemStepper.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7077FF17D02395004C1135 /* SPItemStepper.xib */; };
 		2D7D6EB916BBBB4400F8B98C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EB816BBBB4400F8B98C /* UIKit.framework */; };
 		2D7D6EBB16BBBB4400F8B98C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EBA16BBBB4400F8B98C /* Foundation.framework */; };
 		2D7D6EBD16BBBB4400F8B98C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EBC16BBBB4400F8B98C /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 		2D7077FA17D01E71004C1135 /* SPForwardingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPForwardingTableCell.m; sourceTree = "<group>"; };
 		2D7077FC17D0220A004C1135 /* SPItemStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemStepper.h; sourceTree = "<group>"; };
 		2D7077FD17D0220A004C1135 /* SPItemStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemStepper.m; sourceTree = "<group>"; };
+		2D7077FF17D02395004C1135 /* SPItemStepper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPItemStepper.xib; sourceTree = "<group>"; };
 		2D7D6EB516BBBB4400F8B98C /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D6EB816BBBB4400F8B98C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D7D6EBA16BBBB4400F8B98C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,6 +175,7 @@
 				2D7077F617CFECDD004C1135 /* SPImageViewController.xib */,
 				2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */,
 				2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */,
+				2D7077FF17D02395004C1135 /* SPItemStepper.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				2D7077F817CFECDD004C1135 /* SPImageViewController.xib in Resources */,
 				2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */,
 				2D91862817CE95AD004A0452 /* SPHomepwnerItemCell.xib in Resources */,
+				2D70780017D02395004C1135 /* SPItemStepper.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
