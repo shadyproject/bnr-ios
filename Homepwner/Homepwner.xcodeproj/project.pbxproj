@@ -27,6 +27,7 @@
 		2D91862617CE9527004A0452 /* SPHomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */; };
 		2D91862817CE95AD004A0452 /* SPHomepwnerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */; };
 		2DA46CF017D433DD00D1C99A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA46CEF17D433DD00D1C99A /* CoreData.framework */; };
+		2DA46CF417D435E400D1C99A /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHomepwnerItemCell.m; sourceTree = "<group>"; };
 		2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPHomepwnerItemCell.xib; sourceTree = "<group>"; };
 		2DA46CEF17D433DD00D1C99A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2DA46CF217D435CB00D1C99A /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		2D7D6EBE16BBBB4400F8B98C /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */,
 				2D7D6ED516BBBB5700F8B98C /* Headers */,
 				2D7D6ED616BBBB6100F8B98C /* Implementations */,
 				2D7D6ED716BBBB7000F8B98C /* Xibs */,
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA46CF417D435E400D1C99A /* Homepwner.xcdatamodeld in Sources */,
 				2D7D6EC516BBBB4400F8B98C /* main.m in Sources */,
 				2D7077F717CFECDD004C1135 /* SPImageViewController.m in Sources */,
 				2D7D6EC916BBBB4400F8B98C /* SPAppDelegate.m in Sources */,
@@ -377,6 +381,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DA46CF217D435CB00D1C99A /* Homepwner.xcdatamodel */,
+			);
+			currentVersion = 2DA46CF217D435CB00D1C99A /* Homepwner.xcdatamodel */;
+			path = Homepwner.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2D7D6EAD16BBBB4400F8B98C /* Project object */;
 }
