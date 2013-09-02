@@ -68,7 +68,8 @@
     [fmt setDateStyle:NSDateFormatterMediumStyle];
     [fmt setTimeStyle:NSDateFormatterNoStyle];
     
-    [dateLabel setText:[fmt stringFromDate:item.dateCreated]];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:item.dateCreated];
+    [dateLabel setText:[fmt stringFromDate:date]];
     
     NSString* key = item.imageKey;
     
