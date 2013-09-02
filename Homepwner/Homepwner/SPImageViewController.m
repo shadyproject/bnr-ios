@@ -19,6 +19,7 @@
     [_scrollView setContentSize:s]; //go go auto-synthesis
     [_imageView setFrame:CGRectMake(0, 0, s.width, s.height)];
     _imageView.image = image;
+    [_imageView sizeToFit];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
