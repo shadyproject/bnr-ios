@@ -44,6 +44,7 @@
     NSString *key = item.imageKey;
     [[SPImageStore sharedStore] deleteImageForKey:key];
     
+    [context deleteObject:item];
     [allItems removeObjectIdenticalTo:item];
 }
 
