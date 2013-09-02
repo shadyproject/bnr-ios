@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPImageViewController : UIViewController
+@interface SPImageViewController : UIViewController <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

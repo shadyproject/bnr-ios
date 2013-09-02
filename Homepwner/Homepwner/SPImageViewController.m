@@ -43,4 +43,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -
+#pragma mark UIScrollViewDelegate methods
+-(UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return _imageView;
+}
+
+-(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
+    DLog(@"Finished Zooming");
+}
+
 @end
