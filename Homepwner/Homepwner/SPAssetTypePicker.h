@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SPAssetTypePicker : NSObject
+extern NSString * const kSPAssetTypeCellId;
+
+@class SPItem;
+
+@interface SPAssetTypePicker : UITableViewController
+
+@property (nonatomic, strong) SPItem *item;
 
 @end
