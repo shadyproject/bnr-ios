@@ -65,6 +65,13 @@
     [serialNumberField setText:item.serialNumber];
     [valueField setText:[NSString stringWithFormat:@"%d", item.valueInDollars]];
     
+    NSString *typeLabel = [[item assetType] valueForKey:@"label"];
+    if (!typeLabel) {
+        typeLabel = @"None";
+    }
+    
+    [assetTypeButton setTitle:[NSString stringWithFormat:@"Type: %@", typeLabel] forState:UIControlStateNormal];
+    
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     [fmt setDateStyle:NSDateFormatterMediumStyle];
     [fmt setTimeStyle:NSDateFormatterNoStyle];
