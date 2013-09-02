@@ -21,6 +21,24 @@
 @dynamic orderingValue;
 @dynamic assetType;
 
+#pragma mark -
+#pragma mark Overrides
+-(void)awakeFromFetch{
+    [super awakeFromFetch];
+    
+    UIImage *thumb = [UIImage imageWithData:self.thumbnailData];
+    [self setPrimitiveValue:thumb forKey:@"thumbnail"];
+}
+
+-(void)awakeFromInsert{
+    [super awakeFromInsert];
+    
+    NSTimeInterval t = [[NSDate date] timeIntervalSinceReferenceDate];
+    self.dateCreated = t;
+}
+
+#pragma mark -
+#pragma mark Methods
 -(void)setThumbnailFromImage:(UIImage *)image{
     CGSize origImgSize = [image size];
     
