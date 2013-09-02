@@ -111,7 +111,7 @@
             [NSException raise:@"Fetch Failed" format:@"Reason: %@", [error localizedDescription]];
         }
         
-        allItems = [@[result] mutableCopy];
+        allItems = [[NSMutableArray alloc] initWithArray:result];
         
     }
 }
