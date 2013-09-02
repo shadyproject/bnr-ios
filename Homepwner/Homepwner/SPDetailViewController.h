@@ -20,7 +20,7 @@
     __weak IBOutlet UILabel *dateLabel;
     __weak IBOutlet UIButton *assetTypeButton;
     
-    UIPopoverController *imgPickerPopover;
+    UIPopoverController *uiPopover;
 }
 
 @property (nonatomic, strong) SPItem *item;

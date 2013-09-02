@@ -118,9 +118,9 @@
 #pragma mark -
 #pragma mark IBActions
 - (IBAction)takePicture:(id)sender {
-    if ([imgPickerPopover isPopoverVisible]) {
-        [imgPickerPopover dismissPopoverAnimated:YES];
-        imgPickerPopover = nil;
+    if ([uiPopover isPopoverVisible]) {
+        [uiPopover dismissPopoverAnimated:YES];
+        uiPopover = nil;
         return;
     }
     
@@ -135,10 +135,10 @@
     [imgPicker setDelegate:self];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        imgPickerPopover = [[UIPopoverController alloc] initWithContentViewController:imgPicker];
-        [imgPickerPopover setDelegate:self];
+        uiPopover = [[UIPopoverController alloc] initWithContentViewController:imgPicker];
+        [uiPopover setDelegate:self];
         
-        [imgPickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        [uiPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     } else {
         [self presentViewController:imgPicker animated:YES completion:nil];
     }
@@ -150,6 +150,10 @@
 
 -(IBAction)showAssetTypePicker:(id)sender{
     [self.view endEditing:YES];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        
+    }
     
     SPAssetTypePicker *picker = [[SPAssetTypePicker alloc] init];
     picker.item = item;
@@ -192,8 +196,8 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
-        [imgPickerPopover dismissPopoverAnimated:YES];
-        imgPickerPopover = nil;
+        [uiPopover dismissPopoverAnimated:YES];
+        uiPopover = nil;
     }
 }
 
@@ -201,7 +205,7 @@
 #pragma mark Popover Delegates
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
     DLog(@"User dismissed popover");
-    imgPickerPopover = nil;
+    uiPopover = nil;
 }
 
 #pragma mark -
