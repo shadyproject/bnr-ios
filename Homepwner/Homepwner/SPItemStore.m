@@ -27,7 +27,13 @@
 }
 
 -(SPItem *)createItem{
-    SPItem *item = [[SPItem alloc] init];
+    double order = (allItems.count == 0 ? 1.0 : [allItems.lastObject].orderingValue + 1.0);
+    
+    DLog(@"Adding after %d items, order %.2f", allItems.count, order);
+    
+    SPItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"SPItem" inManagedObjectContext:context];
+    
+    item.orderingValue = order;
     
     [allItems addObject:item];
     
