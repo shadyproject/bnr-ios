@@ -79,8 +79,46 @@
 }
 
 #pragma mark -
-#pragma mark Saving and Loading methods
+#pragma mark AssetType methods
+-(NSArray *)allAssetTypes{
+    if (!allAssetTypes) {
+        NSFetchRequest *req = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *desc = [[model entitiesByName] objectForKey:@"SPAssetType"];
+        
+        [req setEntity:desc];
+        
+        NSError *error = nil;
+        NSArray *result = [context executeFetchRequest:req error:&error];
+        
+        if (!result) {
+            [NSException raise:@"Fetch Failed" format:@"Reason: %@", error.localizedDescription];
+        }
+        
+        allAssetTypes = [result mutableCopy];
+    }
+    
+    if (allAssetTypes.count == 0) {
+        NSManagedObject *type;
+        
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"SPAssetType" inManagedObjectContext:context];
+        [type setValue:@"Furniture" forKey:@"label"];
+        [allAssetTypes addObject:type];
+        
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"SPAssetType" inManagedObjectContext:context];
+        [type setValue:@"Jewelry" forKey:@"label"];
+        [allAssetTypes addObject:type];
+        
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"SPAssetType" inManagedObjectContext:context];
+        [type setValue:@"Electronics" forKey:@"label"];
+        [allAssetTypes addObject:type];
+    }
+    
+    return allAssetTypes;
+}
 
+#pragma mark -
+#pragma mark Saving and Loading methods
 -(NSString*)itemArchivePath{
     NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [docDirs objectAtIndex:0];

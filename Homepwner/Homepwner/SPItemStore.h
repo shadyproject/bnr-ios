@@ -22,10 +22,11 @@
 + (SPItemStore *)sharedStore;
 
 -(void)loadAllItems;
-- (NSArray *)allItems;
-- (SPItem *)createItem;
-- (void)removeItem:(SPItem *)item;
-- (void)moveItemAtIndex:(int)from toIndex:(int)to;
+-(NSArray *)allItems;
+-(NSArray *)allAssetTypes;
+-(SPItem *)createItem;
+-(void)removeItem:(SPItem *)item;
+-(void)moveItemAtIndex:(int)from toIndex:(int)to;
 -(BOOL)saveChanges;
 -(NSString*)itemArchivePath;
 @end
