@@ -1,32 +1,26 @@
 //
 //  SPItem.h
-//  RandomPossessions
+//  Homepwner
 //
-//  Created by Christopher Martin on 11/27/12.
-//  Copyright (c) 2012 Shadyproject. All rights reserved.
+//  Created by Christopher Martin on 9/1/13.
+//  Copyright (c) 2013 Shadyproject. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface SPItem : NSObject <NSCoding>
 
-#pragma mark Class Methods
-+ (id) randomItem;
+@interface SPItem : NSManagedObject
 
-#pragma mark Initializers
-- (id)initWithName:(NSString *)name
-      serialNumber:(NSString *)num
-       dollarValue:(int)value;
-
-@property (nonatomic, copy) NSString *itemName;
-@property (nonatomic, copy) NSString *serialNumber;
-@property (nonatomic) int valueInDollars;
-@property (nonatomic, readonly) NSDate *dateCreated;
-
-@property (nonatomic, copy) NSString* imageKey;
+@property (nonatomic, retain) NSString * itemName;
+@property (nonatomic, retain) NSString * serialNumber;
+@property (nonatomic) int32_t valueInDollars;
+@property (nonatomic) NSTimeInterval dateCreated;
+@property (nonatomic, retain) NSString * imageKey;
+@property (nonatomic, retain) NSData * thumbnailData;
 @property (nonatomic, strong) UIImage *thumbnail;
-@property (nonatomic, strong) NSData *thumbnailData;
+@property (nonatomic) double orderingValue;
+@property (nonatomic, retain) NSManagedObject *assetType;
 
--(void)setThubmnailDataFromImage:(UIImage *)img;
-
+-(void)setThumbnailFromImage:(UIImage*)image;
 @end

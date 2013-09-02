@@ -22,12 +22,12 @@
 		2D7D6ECD16BBBB4400F8B98C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D6ECC16BBBB4400F8B98C /* Default@2x.png */; };
 		2D7D6ECF16BBBB4400F8B98C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D6ECE16BBBB4400F8B98C /* Default-568h@2x.png */; };
 		2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */; };
-		2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDC16C3575700F8B98C /* SPItem.m */; };
 		2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */; };
 		2D91862617CE9527004A0452 /* SPHomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */; };
 		2D91862817CE95AD004A0452 /* SPHomepwnerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */; };
 		2DA46CF017D433DD00D1C99A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA46CEF17D433DD00D1C99A /* CoreData.framework */; };
 		2DA46CF417D435E400D1C99A /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */; };
+		2DA46CF717D439D400D1C99A /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA46CF617D439D400D1C99A /* SPItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +54,6 @@
 		2D7D6ECE16BBBB4400F8B98C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2D7D6ED816BE6B7D00F8B98C /* SPItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemsViewController.h; sourceTree = "<group>"; };
 		2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemsViewController.m; sourceTree = "<group>"; };
-		2D7D6EDB16C3575700F8B98C /* SPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItem.h; sourceTree = "<group>"; };
-		2D7D6EDC16C3575700F8B98C /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
 		2D7D6EDE16C3606C00F8B98C /* SPItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemStore.h; sourceTree = "<group>"; };
 		2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemStore.m; sourceTree = "<group>"; };
 		2D91862417CE9527004A0452 /* SPHomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHomepwnerItemCell.h; sourceTree = "<group>"; };
@@ -63,6 +61,8 @@
 		2D91862717CE95AD004A0452 /* SPHomepwnerItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPHomepwnerItemCell.xib; sourceTree = "<group>"; };
 		2DA46CEF17D433DD00D1C99A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2DA46CF217D435CB00D1C99A /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
+		2DA46CF517D439D400D1C99A /* SPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItem.h; sourceTree = "<group>"; };
+		2DA46CF617D439D400D1C99A /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +111,8 @@
 		2D7D6EBE16BBBB4400F8B98C /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				2DA46CF517D439D400D1C99A /* SPItem.h */,
+				2DA46CF617D439D400D1C99A /* SPItem.m */,
 				2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */,
 				2D7D6ED516BBBB5700F8B98C /* Headers */,
 				2D7D6ED616BBBB6100F8B98C /* Implementations */,
@@ -140,7 +142,6 @@
 				2D448DB41755988C00E29B39 /* SPImageStore.h */,
 				2D91862417CE9527004A0452 /* SPHomepwnerItemCell.h */,
 				2D361E4D16E5ADB000723C42 /* SPDetailViewController.h */,
-				2D7D6EDB16C3575700F8B98C /* SPItem.h */,
 				2D7D6EDE16C3606C00F8B98C /* SPItemStore.h */,
 				2D7D6EC716BBBB4400F8B98C /* SPAppDelegate.h */,
 				2D7D6ED816BE6B7D00F8B98C /* SPItemsViewController.h */,
@@ -156,7 +157,6 @@
 				2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */,
 				2D448DB51755988C00E29B39 /* SPImageStore.m */,
 				2D7D6EDF16C3606C00F8B98C /* SPItemStore.m */,
-				2D7D6EDC16C3575700F8B98C /* SPItem.m */,
 				2D7D6ED916BE6B7D00F8B98C /* SPItemsViewController.m */,
 				2D7D6EC816BBBB4400F8B98C /* SPAppDelegate.m */,
 				2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */,
@@ -253,11 +253,11 @@
 				2D7077F717CFECDD004C1135 /* SPImageViewController.m in Sources */,
 				2D7D6EC916BBBB4400F8B98C /* SPAppDelegate.m in Sources */,
 				2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */,
-				2D7D6EDD16C3575700F8B98C /* SPItem.m in Sources */,
 				2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */,
 				2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */,
 				2D448DB61755988C00E29B39 /* SPImageStore.m in Sources */,
 				2D91862617CE9527004A0452 /* SPHomepwnerItemCell.m in Sources */,
+				2DA46CF717D439D400D1C99A /* SPItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
