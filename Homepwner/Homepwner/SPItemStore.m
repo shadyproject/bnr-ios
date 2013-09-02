@@ -27,7 +27,7 @@
 }
 
 -(SPItem *)createItem{
-    double order = (allItems.count == 0 ? 1.0 : [allItems.lastObject].orderingValue + 1.0);
+    double order = (allItems.count == 0 ? 1.0 : [allItems.lastObject orderingValue] + 1.0);
     
     DLog(@"Adding after %d items, order %.2f", allItems.count, order);
     
