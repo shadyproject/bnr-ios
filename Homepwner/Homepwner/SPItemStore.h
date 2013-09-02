@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @class SPItem;
 
 @interface SPItemStore : NSObject
 {
     NSMutableArray *allItems;
+    NSMutableArray *allAssetTypes;
+    NSManagedObjectContext *context;
+    NSManagedObjectModel *model;
 }
 
 + (SPItemStore *)sharedStore;
 
+-(void)loadAllItems;
 - (NSArray *)allItems;
 - (SPItem *)createItem;
 - (void)removeItem:(SPItem *)item;

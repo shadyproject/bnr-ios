@@ -52,13 +52,42 @@
     NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [docDirs objectAtIndex:0];
     
-    return [docDir stringByAppendingPathComponent:@"items.archive"];
+    return [docDir stringByAppendingPathComponent:@"store.data"];
 }
 
 -(BOOL)saveChanges{
-    NSString *path = [self itemArchivePath];
+    NSError *error = nil;
     
-    return [NSKeyedArchiver archiveRootObject:allItems toFile:path];
+    BOOL didSucceed = [context save:&error];
+    
+    if (!didSucceed) {
+        DLog(@"Error while saving: %@", [error localizedDescription]);
+    }
+    
+    return didSucceed;
+}
+
+-(void)loadAllItems{
+    if (!allItems) {
+        NSFetchRequest *req = [[NSFetchRequest alloc] init];
+        NSEntityDescription *desc = [[model entitiesByName] objectForKey:@"SPItem"];
+        [req setEntity:desc];
+        
+        NSSortDescriptor *sd =
+            [NSSortDescriptor sortDescriptorWithKey:@"orderingValue" ascending:YES];
+        
+        [req setSortDescriptors:@[sd]];
+        
+        NSError *error;
+        NSArray *result = [context executeFetchRequest:req error:&error];
+        
+        if (!result) {
+            [NSException raise:@"Fetch Failed" format:@"Reason: %@", [error localizedDescription]];
+        }
+        
+        allItems = [@[result] mutableCopy];
+        
+    }
 }
 
 #pragma mark -
@@ -71,12 +100,26 @@
     self = [super init];
     
     if (self) {
-       NSString *path = [self itemArchivePath];
-        allItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        //Read in the data model
+        model = [NSManagedObjectModel mergedModelFromBundles:nil];
+        NSPersistentStoreCoordinator *psc =
+            [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
         
-        if (!allItems) {
-            allItems = [@[] mutableCopy]; //woo collection literals
+        //set up the storage path for the sql lite file
+        NSString *path = [self itemArchivePath];
+        NSURL *storeUrl = [NSURL fileURLWithPath:path];
+        NSError *error = nil;
+        
+        if (![psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+            [NSException raise:@"Open Failed" format:@"Reason %@", [error localizedDescription]];
         }
+        
+        //create our managed object context
+        context =   [[NSManagedObjectContext alloc] init];
+        [context setPersistentStoreCoordinator:psc];
+        [context setUndoManager:nil]; //we don't need undo
+        
+        [self loadAllItems];
     }
 
     return self;
