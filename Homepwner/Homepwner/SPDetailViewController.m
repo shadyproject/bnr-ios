@@ -10,6 +10,7 @@
 #import "SPItem.h"
 #import "SPImageStore.h"
 #import "SPItemStore.h"
+#import "SPAssetTypePicker.h"
 
 @implementation SPDetailViewController
 
@@ -138,6 +139,15 @@
 
 -(IBAction)backgroundTapped:(id)sender{
     [[self view] endEditing:YES];
+}
+
+-(IBAction)showAssetTypePicker:(id)sender{
+    [self.view endEditing:YES];
+    
+    SPAssetTypePicker *picker = [[SPAssetTypePicker alloc] init];
+    picker.item = item;
+    
+    [self.navigationController pushViewController:picker animated:YES];
 }
 
 #pragma mark -
