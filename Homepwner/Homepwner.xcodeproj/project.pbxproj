@@ -111,8 +111,6 @@
 		2D7D6EBE16BBBB4400F8B98C /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
-				2DA46CF517D439D400D1C99A /* SPItem.h */,
-				2DA46CF617D439D400D1C99A /* SPItem.m */,
 				2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */,
 				2D7D6ED516BBBB5700F8B98C /* Headers */,
 				2D7D6ED616BBBB6100F8B98C /* Implementations */,
@@ -139,6 +137,7 @@
 		2D7D6ED516BBBB5700F8B98C /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2DA46CF517D439D400D1C99A /* SPItem.h */,
 				2D448DB41755988C00E29B39 /* SPImageStore.h */,
 				2D91862417CE9527004A0452 /* SPHomepwnerItemCell.h */,
 				2D361E4D16E5ADB000723C42 /* SPDetailViewController.h */,
@@ -153,6 +152,7 @@
 		2D7D6ED616BBBB6100F8B98C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2DA46CF617D439D400D1C99A /* SPItem.m */,
 				2D7077F517CFECDD004C1135 /* SPImageViewController.m */,
 				2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */,
 				2D448DB51755988C00E29B39 /* SPImageStore.m */,
