@@ -10,6 +10,7 @@
 		2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D361E4E16E5ADB000723C42 /* SPDetailViewController.m */; };
 		2D361E5116E5ADB000723C42 /* SPDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */; };
 		2D448DB61755988C00E29B39 /* SPImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D448DB51755988C00E29B39 /* SPImageStore.m */; };
+		2D6424D617D54280001831BE /* SPAssetTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6424D517D54280001831BE /* SPAssetTypePicker.m */; };
 		2D7077F717CFECDD004C1135 /* SPImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7077F517CFECDD004C1135 /* SPImageViewController.m */; };
 		2D7077F817CFECDD004C1135 /* SPImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7077F617CFECDD004C1135 /* SPImageViewController.xib */; };
 		2D7D6EB916BBBB4400F8B98C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D6EB816BBBB4400F8B98C /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 		2D361E4F16E5ADB000723C42 /* SPDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDetailViewController.xib; sourceTree = "<group>"; };
 		2D448DB41755988C00E29B39 /* SPImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageStore.h; sourceTree = "<group>"; };
 		2D448DB51755988C00E29B39 /* SPImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageStore.m; sourceTree = "<group>"; };
+		2D6424D417D54280001831BE /* SPAssetTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAssetTypePicker.h; sourceTree = "<group>"; };
+		2D6424D517D54280001831BE /* SPAssetTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAssetTypePicker.m; sourceTree = "<group>"; };
 		2D7077F417CFECDD004C1135 /* SPImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageViewController.h; sourceTree = "<group>"; };
 		2D7077F517CFECDD004C1135 /* SPImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageViewController.m; sourceTree = "<group>"; };
 		2D7077F617CFECDD004C1135 /* SPImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPImageViewController.xib; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 				2D7D6EC716BBBB4400F8B98C /* SPAppDelegate.h */,
 				2D7D6ED816BE6B7D00F8B98C /* SPItemsViewController.h */,
 				2D7077F417CFECDD004C1135 /* SPImageViewController.h */,
+				2D6424D417D54280001831BE /* SPAssetTypePicker.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -152,6 +156,7 @@
 		2D7D6ED616BBBB6100F8B98C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2D6424D517D54280001831BE /* SPAssetTypePicker.m */,
 				2DA46CF617D439D400D1C99A /* SPItem.m */,
 				2D7077F517CFECDD004C1135 /* SPImageViewController.m */,
 				2D91862517CE9527004A0452 /* SPHomepwnerItemCell.m */,
@@ -254,6 +259,7 @@
 				2D7D6EC916BBBB4400F8B98C /* SPAppDelegate.m in Sources */,
 				2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */,
 				2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */,
+				2D6424D617D54280001831BE /* SPAssetTypePicker.m in Sources */,
 				2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */,
 				2D448DB61755988C00E29B39 /* SPImageStore.m in Sources */,
 				2D91862617CE9527004A0452 /* SPHomepwnerItemCell.m in Sources */,
