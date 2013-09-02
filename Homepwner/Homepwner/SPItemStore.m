@@ -12,6 +12,8 @@
 
 @implementation SPItemStore
 
+#pragma mark -
+#pragma mark Singleton methods
 + (SPItemStore *)sharedStore {
     static SPItemStore *sharedStore = nil;
     
@@ -22,6 +24,8 @@
     return sharedStore;
 }
 
+#pragma mark -
+#pragma mark Item Management MEthods
 - (NSArray *)allItems {
     return allItems;
 }
@@ -73,6 +77,9 @@
     
     item.orderingValue = newOrderingValue;
 }
+
+#pragma mark -
+#pragma mark Saving and Loading methods
 
 -(NSString*)itemArchivePath{
     NSArray *docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
