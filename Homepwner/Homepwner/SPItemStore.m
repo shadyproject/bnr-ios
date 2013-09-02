@@ -49,10 +49,29 @@
 }
 
 -(void)moveItemAtIndex:(int)from toIndex:(int)to {
+    
+    if (from == to) {
+        return;
+    }
+    
     SPItem *item = [allItems objectAtIndex:from];
     
     [allItems removeObjectAtIndex:from];
     [allItems insertObject:item atIndex:to];
+    
+    double lowerBound = ( to > 0 ?
+                         [[allItems objectAtIndex:to-1] orderingValue]
+                         : [[allItems objectAtIndex:1] orderingValue] - 2.0);
+    
+    double upperBound = (to < allItems.count - 1 ?
+                         [[allItems objectAtIndex:to + 1] orderingValue]
+                         : [[allItems objectAtIndex:to -  1] orderingValue] + 2.0);
+    
+    double newOrderingValue = (lowerBound + upperBound) / 2.0;
+    
+    DLog(@"Moving to order %f", newOrderingValue);
+    
+    item.orderingValue = newOrderingValue;
 }
 
 -(NSString*)itemArchivePath{
