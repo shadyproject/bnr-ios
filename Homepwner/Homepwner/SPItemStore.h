@@ -21,12 +21,20 @@
 
 + (SPItemStore *)sharedStore;
 
+#pragma mark -
+#pragma mark ITem Management
 -(void)loadAllItems;
 -(NSArray *)allItems;
--(NSArray *)allAssetTypes;
 -(SPItem *)createItem;
 -(void)removeItem:(SPItem *)item;
 -(void)moveItemAtIndex:(int)from toIndex:(int)to;
+
+#pragma mark -
+#pragma mark Asset Type Management
+-(NSArray *)allAssetTypes;
+
+#pragma mark -
+#pragma mark Persistence Methods
 -(BOOL)saveChanges;
 -(NSString*)itemArchivePath;
 @end

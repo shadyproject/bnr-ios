@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3394" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="SPAssetType" syncable="YES">
+    <entity name="SPAssetType" representedClassName="SPAssetType" syncable="YES">
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SPItem" inverseName="assetType" inverseEntity="SPItem" syncable="YES"/>
     </entity>
@@ -16,7 +16,7 @@
         <relationship name="assetType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SPAssetType" inverseName="items" inverseEntity="SPAssetType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SPItem" positionX="0" positionY="0" width="0" height="0"/>
         <element name="SPAssetType" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SPItem" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

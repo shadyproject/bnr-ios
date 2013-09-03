@@ -29,6 +29,7 @@
 		2DA46CF017D433DD00D1C99A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA46CEF17D433DD00D1C99A /* CoreData.framework */; };
 		2DA46CF417D435E400D1C99A /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DA46CF117D435CB00D1C99A /* Homepwner.xcdatamodeld */; };
 		2DA46CF717D439D400D1C99A /* SPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA46CF617D439D400D1C99A /* SPItem.m */; };
+		2DCC66A517D5974800A1BDF1 /* SPAssetType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC66A417D5974800A1BDF1 /* SPAssetType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		2DA46CF217D435CB00D1C99A /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
 		2DA46CF517D439D400D1C99A /* SPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItem.h; sourceTree = "<group>"; };
 		2DA46CF617D439D400D1C99A /* SPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItem.m; sourceTree = "<group>"; };
+		2DCC66A317D5974800A1BDF1 /* SPAssetType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAssetType.h; sourceTree = "<group>"; };
+		2DCC66A417D5974800A1BDF1 /* SPAssetType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAssetType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 		2D7D6ED516BBBB5700F8B98C /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2DCC66A317D5974800A1BDF1 /* SPAssetType.h */,
 				2DA46CF517D439D400D1C99A /* SPItem.h */,
 				2D448DB41755988C00E29B39 /* SPImageStore.h */,
 				2D91862417CE9527004A0452 /* SPHomepwnerItemCell.h */,
@@ -156,6 +160,7 @@
 		2D7D6ED616BBBB6100F8B98C /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2DCC66A417D5974800A1BDF1 /* SPAssetType.m */,
 				2D6424D517D54280001831BE /* SPAssetTypePicker.m */,
 				2DA46CF617D439D400D1C99A /* SPItem.m */,
 				2D7077F517CFECDD004C1135 /* SPImageViewController.m */,
@@ -258,6 +263,7 @@
 				2D7077F717CFECDD004C1135 /* SPImageViewController.m in Sources */,
 				2D7D6EC916BBBB4400F8B98C /* SPAppDelegate.m in Sources */,
 				2D7D6EDA16BE6B7D00F8B98C /* SPItemsViewController.m in Sources */,
+				2DCC66A517D5974800A1BDF1 /* SPAssetType.m in Sources */,
 				2D7D6EE016C3606C00F8B98C /* SPItemStore.m in Sources */,
 				2D6424D617D54280001831BE /* SPAssetTypePicker.m in Sources */,
 				2D361E5016E5ADB000723C42 /* SPDetailViewController.m in Sources */,
