@@ -19,7 +19,14 @@ NSString * const kSPAssetTypeCellId = @"UITableViewCell-Default";
 #pragma mark -
 #pragma mark Initialization
 -(id)init{
-    return [super initWithStyle:UITableViewStyleGrouped];
+    
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    
+    if (self) {
+        //todo stuf here
+    }
+    
+    return self;
 }
 
 -(id)initWithStyle:(UITableViewStyle)style{
@@ -68,6 +75,12 @@ NSString * const kSPAssetTypeCellId = @"UITableViewCell-Default";
     item.assetType = assetType;
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark Asset Type Management Methdod
+-(IBAction)addNewAssetType:(id)sender{
+    DLog(@"Add new asset type here");
 }
 
 @end

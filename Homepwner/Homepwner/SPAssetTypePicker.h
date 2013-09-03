@@ -16,4 +16,6 @@ extern NSString * const kSPAssetTypeCellId;
 
 @property (nonatomic, strong) SPItem *item;
 
+-(IBAction)addNewAssetType:(id)sender;
+
 @end
