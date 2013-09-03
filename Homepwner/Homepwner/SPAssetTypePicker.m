@@ -67,6 +67,8 @@ NSString * const kSPAssetTypeCellId = @"UITableViewCell-Default";
     
     item.assetType = assetType;
     
+    //todo remove the checkmarks from the other asset types
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

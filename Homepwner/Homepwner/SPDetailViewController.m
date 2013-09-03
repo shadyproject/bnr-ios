@@ -151,14 +151,26 @@
 -(IBAction)showAssetTypePicker:(id)sender{
     [self.view endEditing:YES];
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        
+    if ([uiPopover isPopoverVisible]) {
+        [uiPopover dismissPopoverAnimated:YES];
+        uiPopover = nil;
+        return;
     }
     
     SPAssetTypePicker *picker = [[SPAssetTypePicker alloc] init];
     picker.item = item;
     
-    [self.navigationController pushViewController:picker animated:YES];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        uiPopover = [[UIPopoverController alloc] initWithContentViewController:picker];
+        [uiPopover setDelegate:self];
+        
+        [uiPopover presentPopoverFromRect:assetTypeButton.frame inView:self.view
+                 permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else {
+        [self.navigationController pushViewController:picker animated:YES];
+    }
+    
+    
 }
 
 #pragma mark -
