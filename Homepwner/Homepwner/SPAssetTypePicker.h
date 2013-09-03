@@ -12,6 +12,7 @@ extern NSString * const kSPAssetTypeCellId;
 
 @class SPItem;
 
+//todo implement deleting of items
 @interface SPAssetTypePicker : UITableViewController
 
 @property (nonatomic, strong) SPItem *item;

@@ -23,7 +23,12 @@ NSString * const kSPAssetTypeCellId = @"UITableViewCell-Default";
     self = [super initWithStyle:UITableViewStyleGrouped];
     
     if (self) {
-        //todo stuf here
+        UIBarButtonItem *addBtn =
+            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                          target:self
+                                                          action:@selector(addNewAssetType:)];
+        
+        self.navigationItem.rightBarButtonItem = addBtn;
     }
     
     return self;
